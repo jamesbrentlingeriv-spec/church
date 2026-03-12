@@ -132,25 +132,15 @@
             <!-- Live Video Player -->
             <div class="bg-gray-900 rounded-2xl overflow-hidden shadow-2xl mb-8">
                 <div class="video-container rounded-2xl">
-                    <!-- Placeholder for live stream - replace with actual embed code -->
-                    <div class="absolute inset-0 flex items-center justify-center text-center p-8">
-                        <div>
-                            <div class="flex items-center justify-center gap-2 mb-4">
-                                <span class="w-3 h-3 bg-red-500 rounded-full animate-pulse"></span>
-                                <span class="text-red-500 font-semibold uppercase tracking-wider text-sm">Live Stream
-                                    Placeholder</span>
-                            </div>
-                            <i data-lucide="video" class="h-16 w-16 text-gray-600 mx-auto mb-4"></i>
-                            <p class="text-white text-xl mb-2">Live Stream Player</p>
-                            <p class="text-gray-400 mb-6">Embed your live stream here (YouTube, Facebook, Vimeo, etc.)
-                            </p>
-                            <a href="#"
-                                class="bg-secondary hover:bg-amber-600 text-white px-6 py-3 rounded-lg font-medium transition inline-flex items-center gap-2">
-                                <i data-lucide="play" class="h-5 w-5"></i>
-                                Start Watching
-                            </a>
-                        </div>
-                    </div>
+                    <video id="serviceVideo" class="w-full h-full object-cover" controls muted loop
+                        poster="output_ocyovl.png">
+                        <source src="churchservice.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <button onclick="playVideo()"
+                        class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-4xl hover:bg-opacity-70 transition">
+                        <i data-lucide="play" class="h-20 w-20 mx-auto"></i>
+                    </button>
                 </div>
                 <div class="p-6 md:p-8">
                     <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
@@ -319,7 +309,21 @@
     </footer>
 
     <script src="script.js"></script>
-    <script>lucide.createIcons();</script>
+    <script>
+        lucide.createIcons();
+
+        function playVideo() {
+            const video = document.getElementById('serviceVideo');
+            video.play();
+            const btn = document.querySelector('button[onclick="playVideo()"]');
+            btn.style.display = 'none';
+        }
+
+        // Autoplay on click anywhere
+        document.addEventListener('click', function () {
+            playVideo();
+        }, { once: true });
+    </script>
 </body>
 
 </html>
