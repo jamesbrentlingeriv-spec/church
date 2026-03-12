@@ -55,6 +55,16 @@
                 transform: translateY(0);
             }
         }
+
+        @keyframes spin-slow {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
     </style>
 </head>
 
@@ -139,10 +149,12 @@
 
     <!-- Hero Section -->
     <div class="relative bg-primary overflow-hidden hero-pattern">
-        <div class="absolute inset-0">
-            <img src="http://static.photos/people/1200x630/42" alt="Church community"
-                class="w-full h-full object-cover opacity-20">
-            <div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/90 to-primary/70"></div>
+        <div class="absolute inset-0 flex items-center justify-end p-16 lg:p-32">
+            <div class="relative w-64 h-64 lg:w-96 lg:h-96 animate-spin-slow">
+                <img src="output_ocyovl.png" alt="Kingdom's Journey Logo"
+                    class="w-full h-full object-contain opacity-30 mix-blend-overlay">
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/90 to-primary/70 rounded-full"></div>
         </div>
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
             <div class="lg:w-2/3 fade-in">
