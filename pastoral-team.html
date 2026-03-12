@@ -1,297 +1,472 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pastoral Team - Kingdom's Journey</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap"
-        rel="stylesheet">
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#1e3a8a',
-                        secondary: '#f59e0b',
-                        accent: '#fbbf24',
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif'],
-                    }
-                }
-            }
-        }
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1e3a8a",
+              secondary: "#f59e0b",
+              accent: "#fbbf24",
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              serif: ["Playfair Display", "serif"],
+            },
+          },
+        },
+      };
     </script>
-</head>
+  </head>
 
-<body class="font-sans text-gray-800 bg-gray-50">
+  <body class="font-sans text-gray-800 bg-gray-50">
     <!-- Navigation -->
     <nav class="bg-white shadow-md sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-20">
-                <div class="flex items-center">
-                    <a href="index.html" class="flex-shrink-0 flex items-center gap-3">
-                        <div
-                            class="logo-container h-10 w-10 flex items-center justify-center overflow-hidden rounded-lg bg-white border-2 border-primary">
-                            <i data-lucide="church" class="h-6 w-6 text-primary logo-fallback hidden"></i>
-                            <img class="site-logo h-full w-full object-cover" src="output_ocyovl.png"
-                                alt="Kingdom's Journey Logo">
-                        </div>
-                        <div>
-                            <span class="font-serif text-2xl font-bold text-primary block leading-tight">Kingdom's
-                                Journey</span>
-                            <span class="text-xs text-secondary font-semibold italic tracking-wider">Real Church for
-                                Real People</span>
-                        </div>
-                    </a>
-                </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-20">
+          <div class="flex items-center">
+            <a href="index.html" class="flex-shrink-0 flex items-center gap-3">
+              <div
+                class="logo-container h-10 w-10 flex items-center justify-center overflow-hidden rounded-lg bg-white border-2 border-primary"
+              >
+                <i
+                  data-lucide="church"
+                  class="h-6 w-6 text-primary logo-fallback hidden"
+                ></i>
+                <img
+                  class="site-logo h-full w-full object-cover"
+                  src="output_ocyovl.png"
+                  alt="Kingdom's Journey Logo"
+                />
+              </div>
+              <div>
+                <span
+                  class="font-serif text-2xl font-bold text-primary block leading-tight"
+                  >Kingdom Journey</span
+                >
+                <span
+                  class="text-xs text-secondary font-semibold italic tracking-wider"
+                  >Real Church for Real People</span
+                >
+              </div>
+            </a>
+          </div>
 
-                <div class="hidden md:flex items-center space-x-1">
-                    <a href="index.html"
-                        class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition hover:bg-blue-50">Home</a>
-                    <a href="about.html"
-                        class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition hover:bg-blue-50">About</a>
-                    <a href="services.html"
-                        class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition hover:bg-blue-50">Services</a>
-                    <a href="calendar.html"
-                        class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition hover:bg-blue-50">Calendar</a>
-                    <a href="pastoral-team.html"
-                        class="text-primary font-semibold px-3 py-2 rounded-md text-sm">Pastoral Team</a>
-                    <a href="watch.html"
-                        class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition hover:bg-blue-50 flex items-center gap-1">
-                        <i data-lucide="video" class="h-4 w-4"></i> Live
-                    </a>
-                    <a href="giving.html"
-                        class="bg-secondary text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-amber-600 transition shadow-md ml-2">Give
-                        Online</a>
-                    <a href="contact.html"
-                        class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition hover:bg-blue-50">Contact</a>
-                </div>
+          <div class="hidden md:flex items-center space-x-1">
+            <a
+              href="index.html"
+              class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition hover:bg-blue-50"
+              >Home</a
+            >
+            <a
+              href="about.html"
+              class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition hover:bg-blue-50"
+              >About</a
+            >
+            <a
+              href="services.html"
+              class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition hover:bg-blue-50"
+              >Services</a
+            >
+            <a
+              href="calendar.html"
+              class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition hover:bg-blue-50"
+              >Calendar</a
+            >
+            <a
+              href="pastoral-team.html"
+              class="text-primary font-semibold px-3 py-2 rounded-md text-sm"
+              >Pastoral Team</a
+            >
+            <a
+              href="watch.html"
+              class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition hover:bg-blue-50 flex items-center gap-1"
+            >
+              <i data-lucide="video" class="h-4 w-4"></i> Live
+            </a>
+            <a
+              href="giving.html"
+              class="bg-secondary text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-amber-600 transition shadow-md ml-2"
+              >Give Online</a
+            >
+            <a
+              href="contact.html"
+              class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition hover:bg-blue-50"
+              >Contact</a
+            >
+          </div>
 
-                <div class="flex items-center md:hidden">
-                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-primary focus:outline-none p-2">
-                        <i data-lucide="menu" class="h-6 w-6"></i>
-                    </button>
-                </div>
-            </div>
+          <div class="flex items-center md:hidden">
+            <button
+              id="mobile-menu-btn"
+              class="text-gray-700 hover:text-primary focus:outline-none p-2"
+            >
+              <i data-lucide="menu" class="h-6 w-6"></i>
+            </button>
+          </div>
         </div>
+      </div>
 
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="index.html" class="text-gray-700 block px-3 py-2 rounded-md text-base">Home</a>
-                <a href="about.html" class="text-gray-700 block px-3 py-2 rounded-md text-base">About Us</a>
-                <a href="services.html" class="text-gray-700 block px-3 py-2 rounded-md text-base">Services</a>
-                <a href="calendar.html" class="text-gray-700 block px-3 py-2 rounded-md text-base">Calendar</a>
-                <a href="pastoral-team.html"
-                    class="text-primary font-semibold block px-3 py-2 rounded-md text-base">Pastoral Team</a>
-                <a href="watch.html" class="text-gray-700 block px-3 py-2 rounded-md text-base">Watch Live</a>
-                <a href="giving.html" class="text-secondary font-semibold block px-3 py-2 rounded-md text-base">Give
-                    Online</a>
-                <a href="contact.html" class="text-gray-700 block px-3 py-2 rounded-md text-base">Contact</a>
-            </div>
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-white border-t border-gray-200"
+      >
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <a
+            href="index.html"
+            class="text-gray-700 block px-3 py-2 rounded-md text-base"
+            >Home</a
+          >
+          <a
+            href="about.html"
+            class="text-gray-700 block px-3 py-2 rounded-md text-base"
+            >About Us</a
+          >
+          <a
+            href="services.html"
+            class="text-gray-700 block px-3 py-2 rounded-md text-base"
+            >Services</a
+          >
+          <a
+            href="calendar.html"
+            class="text-gray-700 block px-3 py-2 rounded-md text-base"
+            >Calendar</a
+          >
+          <a
+            href="pastoral-team.html"
+            class="text-primary font-semibold block px-3 py-2 rounded-md text-base"
+            >Pastoral Team</a
+          >
+          <a
+            href="watch.html"
+            class="text-gray-700 block px-3 py-2 rounded-md text-base"
+            >Watch Live</a
+          >
+          <a
+            href="giving.html"
+            class="text-secondary font-semibold block px-3 py-2 rounded-md text-base"
+            >Give Online</a
+          >
+          <a
+            href="contact.html"
+            class="text-gray-700 block px-3 py-2 rounded-md text-base"
+            >Contact</a
+          >
         </div>
+      </div>
     </nav>
 
     <!-- Header -->
     <div class="bg-primary py-16">
-        <div class="max-w-7xl mx-auto px-4 text-center text-white">
-            <h1 class="text-4xl md:text-5xl font-serif font-bold mb-4">Our Pastoral Team</h1>
-            <p class="text-xl text-blue-200">Meet the leaders dedicated to serving our congregation</p>
-        </div>
+      <div class="max-w-7xl mx-auto px-4 text-center text-white">
+        <h1 class="text-4xl md:text-5xl font-serif font-bold mb-4">
+          Our Pastoral Team
+        </h1>
+        <p class="text-xl text-blue-200">
+          Meet the leaders dedicated to serving our congregation
+        </p>
+      </div>
     </div>
 
     <!-- Lead Pastor -->
     <section class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-4xl mx-auto">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+          <div
+            class="bg-gradient-to-br from-blue-50 to-white rounded-2xl shadow-lg p-8 md:p-12 border border-blue-100"
+          >
+            <div class="flex flex-col md:flex-row gap-8 items-center">
+              <div class="flex-shrink-0">
                 <div
-                    class="bg-gradient-to-br from-blue-50 to-white rounded-2xl shadow-lg p-8 md:p-12 border border-blue-100">
-                    <div class="flex flex-col md:flex-row gap-8 items-center">
-                        <div class="flex-shrink-0">
-                            <div class="w-48 h-48 rounded-lg overflow-hidden shadow-xl bg-gray-200">
-                                <img src="http://static.photos/people/400x400/101" alt="Lead Pastor"
-                                    class="w-full h-full object-cover">
-                            </div>
-                        </div>
-                        <div class="text-center md:text-left">
-                            <p class="text-secondary font-semibold mb-2 uppercase tracking-wide text-sm">Lead Pastor</p>
-                            <h2 class="text-3xl font-serif font-bold text-gray-900 mb-4">Pastor Ron</h2>
-                            <p class="text-gray-600 mb-4 leading-relaxed">
-                                Pastor Ron has been serving Kingdom's Journey since its founding. With a heart for
-                                discipleship and a passion for Pentecostal ministry, he leads our congregation
-                                with vision and dedication.
-                            </p>
-                            <div class="flex flex-wrap justify-center md:justify-start gap-2">
-                                <span class="bg-primary text-white px-3 py-1 rounded-full text-sm">Leadership</span>
-                                <span class="bg-secondary text-white px-3 py-1 rounded-full text-sm">Teaching</span>
-                                <span class="bg-blue-500 text-white px-3 py-1 rounded-full text-sm">Counseling</span>
-                            </div>
-                        </div>
-                    </div>
+                  class="w-48 h-48 rounded-lg overflow-hidden shadow-xl bg-gray-200"
+                >
+                  <img
+                    src="RON.JPG"
+                    alt="Lead Pastor"
+                    class="w-full h-full object-cover"
+                  />
                 </div>
+              </div>
+              <div class="text-center md:text-left">
+                <p
+                  class="text-secondary font-semibold mb-2 uppercase tracking-wide text-sm"
+                >
+                  Lead Pastor
+                </p>
+                <h2 class="text-3xl font-serif font-bold text-gray-900 mb-4">
+                  Pastor Ron
+                </h2>
+                <p class="text-gray-600 mb-4 leading-relaxed">
+                  Ron Pietosi was raised in Southern California. He wasn’t
+                  brought up in church but came to know Christ at the age of 24.
+                  It wasn’t long after his conversion that he felt the call of
+                  God on his life to preach the gospel. His heart is and has
+                  always been to serve people and help them develop a personal
+                  and lasting relationship with Jesus Christ. When Ron isn’t
+                  helping people he enjoys bass fishing, movies, Xbox and
+                  spending time with it his wife and family, not necessarily in
+                  that order!
+                </p>
+                <div
+                  class="flex flex-wrap justify-center md:justify-start gap-2"
+                >
+                  <span
+                    class="bg-primary text-white px-3 py-1 rounded-full text-sm"
+                    >Leadership</span
+                  >
+                  <span
+                    class="bg-secondary text-white px-3 py-1 rounded-full text-sm"
+                    >Teaching</span
+                  >
+                  <span
+                    class="bg-blue-500 text-white px-3 py-1 rounded-full text-sm"
+                    >Counseling</span
+                  >
+                </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Ministry Team Grid -->
     <section class="py-16 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-serif font-bold text-gray-900 mb-4">Ministry Leadership</h2>
-                <div class="w-24 h-1 bg-secondary mx-auto rounded-full"></div>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Team Member 1 -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
-                    <div class="h-64 bg-gray-200 overflow-hidden">
-                        <img src="http://static.photos/people/400x400/102" alt="Team Member"
-                            class="w-full h-full object-cover hover:scale-105 transition duration-500">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-1">Worship Leader</h3>
-                        <p class="text-secondary font-medium mb-3">Music Ministry</p>
-                        <p class="text-gray-600 text-sm">
-                            Leading our congregation in Spirit-filled worship and Praise.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Team Member 2 -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
-                    <div class="h-64 bg-gray-200 overflow-hidden">
-                        <img src="http://static.photos/people/400x400/103" alt="Team Member"
-                            class="w-full h-full object-cover hover:scale-105 transition duration-500">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-1">Youth Pastor</h3>
-                        <p class="text-secondary font-medium mb-3">Youth Ministry</p>
-                        <p class="text-gray-600 text-sm">
-                            Dedicated to guiding the next generation in their faith journey.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Team Member 3 -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
-                    <div class="h-64 bg-gray-200 overflow-hidden">
-                        <img src="http://static.photos/people/400x400/104" alt="Team Member"
-                            class="w-full h-full object-cover hover:scale-105 transition duration-500">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-1">Children's Director</h3>
-                        <p class="text-secondary font-medium mb-3">Children's Ministry</p>
-                        <p class="text-gray-600 text-sm">
-                            Creating a fun and safe environment for kids to learn about Jesus.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Team Member 4 -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
-                    <div class="h-64 bg-gray-200 overflow-hidden">
-                        <img src="http://static.photos/people/400x400/105" alt="Team Member"
-                            class="w-full h-full object-cover hover:scale-105 transition duration-500">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-1">Outreach Coordinator</h3>
-                        <p class="text-secondary font-medium mb-3">Community Outreach</p>
-                        <p class="text-gray-600 text-sm">
-                            Connecting our church with the local community through service.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Team Member 5 -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
-                    <div class="h-64 bg-gray-200 overflow-hidden">
-                        <img src="http://static.photos/people/400x400/106" alt="Team Member"
-                            class="w-full h-full object-cover hover:scale-105 transition duration-500">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-1">Prayer Director</h3>
-                        <p class="text-secondary font-medium mb-3">Prayer Ministry</p>
-                        <p class="text-gray-600 text-sm">
-                            Leading our intercessory prayer team and prayer meetings.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Join the Team CTA -->
-                <div
-                    class="bg-gradient-to-br from-primary to-blue-800 rounded-xl shadow-md p-6 flex flex-col justify-center items-center text-center">
-                    <i data-lucide="users" class="h-12 w-12 text-secondary mb-4"></i>
-                    <h3 class="text-xl font-bold text-white mb-2">Join Our Team</h3>
-                    <p class="text-blue-200 text-sm mb-4">
-                        Interested in serving? We're always looking for volunteers!
-                    </p>
-                    <a href="contact.html"
-                        class="bg-secondary hover:bg-amber-600 text-white px-6 py-2 rounded-lg transition">
-                        Get Involved
-                    </a>
-                </div>
-            </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-serif font-bold text-gray-900 mb-4">
+            Ministry Leadership
+          </h2>
+          <div class="w-24 h-1 bg-secondary mx-auto rounded-full"></div>
         </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Team Member 1 -->
+          <div
+            class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300"
+          >
+            <div class="h-64 bg-gray-200 overflow-hidden">
+              <img
+                src="http://static.photos/people/400x400/102"
+                alt="Team Member"
+                class="w-full h-full object-cover hover:scale-105 transition duration-500"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-1">
+                Worship Leader
+              </h3>
+              <p class="text-secondary font-medium mb-3">Music Ministry</p>
+              <p class="text-gray-600 text-sm">
+                Leading our congregation in Spirit-filled worship and Praise.
+              </p>
+            </div>
+          </div>
+
+          <!-- Team Member 2 -->
+          <div
+            class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300"
+          >
+            <div class="h-64 bg-gray-200 overflow-hidden">
+              <img
+                src="http://static.photos/people/400x400/103"
+                alt="Team Member"
+                class="w-full h-full object-cover hover:scale-105 transition duration-500"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-1">Youth Pastor</h3>
+              <p class="text-secondary font-medium mb-3">Youth Ministry</p>
+              <p class="text-gray-600 text-sm">
+                Dedicated to guiding the next generation in their faith journey.
+              </p>
+            </div>
+          </div>
+
+          <!-- Team Member 3 -->
+          <div
+            class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300"
+          >
+            <div class="h-64 bg-gray-200 overflow-hidden">
+              <img
+                src="http://static.photos/people/400x400/104"
+                alt="Team Member"
+                class="w-full h-full object-cover hover:scale-105 transition duration-500"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-1">
+                Children's Director
+              </h3>
+              <p class="text-secondary font-medium mb-3">Children's Ministry</p>
+              <p class="text-gray-600 text-sm">
+                Creating a fun and safe environment for kids to learn about
+                Jesus.
+              </p>
+            </div>
+          </div>
+
+          <!-- Team Member 4 -->
+          <div
+            class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300"
+          >
+            <div class="h-64 bg-gray-200 overflow-hidden">
+              <img
+                src="http://static.photos/people/400x400/105"
+                alt="Team Member"
+                class="w-full h-full object-cover hover:scale-105 transition duration-500"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-1">
+                Outreach Coordinator
+              </h3>
+              <p class="text-secondary font-medium mb-3">Community Outreach</p>
+              <p class="text-gray-600 text-sm">
+                Connecting our church with the local community through service.
+              </p>
+            </div>
+          </div>
+
+          <!-- Team Member 5 -->
+          <div
+            class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300"
+          >
+            <div class="h-64 bg-gray-200 overflow-hidden">
+              <img
+                src="http://static.photos/people/400x400/106"
+                alt="Team Member"
+                class="w-full h-full object-cover hover:scale-105 transition duration-500"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-1">
+                Prayer Director
+              </h3>
+              <p class="text-secondary font-medium mb-3">Prayer Ministry</p>
+              <p class="text-gray-600 text-sm">
+                Leading our intercessory prayer team and prayer meetings.
+              </p>
+            </div>
+          </div>
+
+          <!-- Join the Team CTA -->
+          <div
+            class="bg-gradient-to-br from-primary to-blue-800 rounded-xl shadow-md p-6 flex flex-col justify-center items-center text-center"
+          >
+            <i data-lucide="users" class="h-12 w-12 text-secondary mb-4"></i>
+            <h3 class="text-xl font-bold text-white mb-2">Join Our Team</h3>
+            <p class="text-blue-200 text-sm mb-4">
+              Interested in serving? We're always looking for volunteers!
+            </p>
+            <a
+              href="contact.html"
+              class="bg-secondary hover:bg-amber-600 text-white px-6 py-2 rounded-lg transition"
+            >
+              Get Involved
+            </a>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-gray-300 py-12 border-t border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div class="col-span-2">
-                    <div class="flex items-center gap-2 mb-4">
-                        <div class="h-8 w-8 flex items-center justify-center overflow-hidden rounded-lg bg-white">
-                            <i data-lucide="church" class="h-5 w-5 text-primary logo-fallback-footer hidden"></i>
-                            <img id="footerLogo" class="h-full w-full object-cover hidden" src="" alt="Logo">
-                        </div>
-                        <div>
-                            <span class="font-serif text-xl font-bold text-white block">Kingdom's Journey</span>
-                            <span class="text-xs text-secondary italic">Real Church for Real People</span>
-                        </div>
-                    </div>
-                    <p class="text-gray-400 text-sm">
-                        A Pentecostal church dedicated to spreading the Gospel and building a
-                        community of faith, hope, and love in Nicholasville, Kentucky.
-                    </p>
-                </div>
-                <div>
-                    <h5 class="text-white font-semibold mb-4">Quick Links</h5>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="about.html" class="hover:text-secondary transition">About Us</a></li>
-                        <li><a href="services.html" class="hover:text-secondary transition">Services</a></li>
-                        <li><a href="calendar.html" class="hover:text-secondary transition">Events</a></li>
-                        <li><a href="giving.html" class="hover:text-secondary transition">Giving</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h5 class="text-white font-semibold mb-4">Contact</h5>
-                    <ul class="space-y-2 text-sm">
-                        <li class="flex items-start gap-2">
-                            <i data-lucide="map-pin" class="h-4 w-4 mt-1 flex-shrink-0"></i>
-                            <span>101 Edgewood Plaza<br>Nicholasville, KY 40356</span>
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <i data-lucide="mail" class="h-4 w-4 flex-shrink-0"></i>
-                            <span>Ron@KingdomJourneyKY.com</span>
-                        </li>
-                    </ul>
-                </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-4 gap-8">
+          <div class="col-span-2">
+            <div class="flex items-center gap-2 mb-4">
+              <div
+                class="h-8 w-8 flex items-center justify-center overflow-hidden rounded-lg bg-white"
+              >
+                <i
+                  data-lucide="church"
+                  class="h-5 w-5 text-primary logo-fallback-footer hidden"
+                ></i>
+                <img
+                  id="footerLogo"
+                  class="h-full w-full object-cover hidden"
+                  src=""
+                  alt="Logo"
+                />
+              </div>
+              <div>
+                <span class="font-serif text-xl font-bold text-white block"
+                  >Kingdom Journey</span
+                >
+                <span class="text-xs text-secondary italic"
+                  >Real Church for Real People</span
+                >
+              </div>
             </div>
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-500">
-                <p>&copy; 2024 Kingdom's Journey. All rights reserved.</p>
-            </div>
+            <p class="text-gray-400 text-sm">
+              A Pentecostal church dedicated to spreading the Gospel and
+              building a community of faith, hope, and love in Nicholasville,
+              Kentucky.
+            </p>
+          </div>
+          <div>
+            <h5 class="text-white font-semibold mb-4">Quick Links</h5>
+            <ul class="space-y-2 text-sm">
+              <li>
+                <a href="about.html" class="hover:text-secondary transition"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a href="services.html" class="hover:text-secondary transition"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a href="calendar.html" class="hover:text-secondary transition"
+                  >Events</a
+                >
+              </li>
+              <li>
+                <a href="giving.html" class="hover:text-secondary transition"
+                  >Giving</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h5 class="text-white font-semibold mb-4">Contact</h5>
+            <ul class="space-y-2 text-sm">
+              <li class="flex items-start gap-2">
+                <i data-lucide="map-pin" class="h-4 w-4 mt-1 flex-shrink-0"></i>
+                <span>101 Edgewood Plaza<br />Nicholasville, KY 40356</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="mail" class="h-4 w-4 flex-shrink-0"></i>
+                <span>Ron@KingdomJourneyKY.com</span>
+              </li>
+            </ul>
+          </div>
         </div>
+        <div
+          class="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-500"
+        >
+          <p>&copy; 2026 Kingdom Journey. All rights reserved.</p>
+        </div>
+      </div>
     </footer>
 
     <script src="script.js"></script>
-    <script>lucide.createIcons();</script>
-</body>
-
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
 </html>
