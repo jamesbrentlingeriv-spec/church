@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Kingdom's Journey</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e3a8a',
+                        secondary: '#f59e0b',
+                        accent: '#fbbf24',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .fade-in {
+            animation: fadeIn 0.6s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .upload-area {
+            border: 2px dashed #cbd5e1;
+            transition: all 0.3s ease;
+        }
+
+        .upload-area:hover {
+            border-color: #1e3a8a;
+            background-color: #eff6ff;
+        }
+
+        .upload-area.dragover {
+            border-color: #f59e0b;
+            background-color: #fffbeb;
+        }
+    </style>
+</head>
+
+<body class="font-sans text-gray-800 bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex-shrink-0 flex items-center gap-3">
+                        <div
+                            class="h-10 w-10 flex items-center justify-center overflow-hidden rounded-lg bg-white border-2 border-primary">
+                            <i data-lucide="church" class="h-6 w-6 text-primary logo-fallback"></i>
+                            <img id="siteLogo" class="h-full w-full object-cover hidden" src=""
+                                alt="Kingdom's Journey Logo">
+                        </div>
+                        <div>
+                            <span class="font-serif text-2xl font-bold text-primary block leading-tight">Kingdom's
+                                Journey</span>
+                            <span class="text-xs text-secondary font-semibold italic tracking-wider">Real Church for
+                                Real People</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="index.html"
+                        class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition hover:bg-blue-50">Home</a>
+                    <a href="about.html"
+                        class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition hover:bg-blue-50">About</a>
+                    <a href="services.html"
+                        class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition hover:bg-blue-50">Services</a>
+                    <a href="calendar.html"
+                        class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition hover:bg-blue-50">Calendar</a>
+                    <a href="pastoral-team.html"
+                        class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition hover:bg-blue-50">Pastoral
+                        Team</a>
+                    <a href="watch.html"
+                        class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition hover:bg-blue-50 flex items-center gap-1">
+                        <i data-lucide="video" class="h-4 w-4"></i> Live
+                    </a>
+                    <a href="giving.html"
+                        class="bg-secondary text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-amber-600 transition shadow-md ml-2">Give
+                        Online</a>
+                    <a href="contact.html"
+                        class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition hover:bg-blue-50">Contact</a>
+                </div>
+
+                <div class="flex items-center md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-primary focus:outline-none p-2">
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="text-gray-700 block px-3 py-2 rounded-md text-base">Home</a>
+                <a href="about.html" class="text-gray-700 block px-3 py-2 rounded-md text-base">About Us</a>
+                <a href="services.html" class="text-gray-700 block px-3 py-2 rounded-md text-base">Services</a>
+                <a href="calendar.html" class="text-gray-700 block px-3 py-2 rounded-md text-base">Calendar</a>
+                <a href="pastoral-team.html" class="text-gray-700 block px-3 py-2 rounded-md text-base">Pastoral
+                    Team</a>
+                <a href="watch.html" class="text-gray-700 block px-3 py-2 rounded-md text-base">Watch Live</a>
+                <a href="giving.html" class="text-secondary font-semibold block px-3 py-2 rounded-md text-base">Give
+                    Online</a>
+                <a href="contact.html" class="text-gray-700 block px-3 py-2 rounded-md text-base">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <div class="bg-primary py-12">
+        <div class="max-w-7xl mx-auto px-4 text-center text-white">
+            <h1 class="text-4xl md:text-5xl font-serif font-bold mb-4">Website Admin</h1>
+            <p class="text-xl text-blue-200">Manage your church logo and settings</p>
+        </div>
+    </div>
+
+    <!-- Logo Upload Section -->
+    <section class="py-12 bg-white">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-200">
+                <div class="text-center mb-8">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="image" class="h-8 w-8 text-white"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-gray-900 mb-2">Church Logo</h2>
+                    <p class="text-gray-600">Upload your church logo to display across the website. Recommended size:
+                        200x200px or square format.</p>
+                </div>
+
+                <!-- Current Logo Preview -->
+                <div id="currentLogoSection" class="mb-8 text-center hidden">
+                    <p class="text-sm font-medium text-gray-700 mb-3">Current Logo</p>
+                    <div class="inline-block p-4 bg-gray-50 rounded-xl border border-gray-200">
+                        <img id="previewLogo" class="h-24 w-24 object-cover rounded-lg" src="" alt="Current Logo">
+                    </div>
+                    <button onclick="removeLogo()"
+                        class="mt-3 text-red-600 hover:text-red-800 text-sm font-medium flex items-center gap-1 mx-auto">
+                        <i data-lucide="trash-2" class="h-4 w-4"></i>
+                        Remove Logo
+                    </button>
+                </div>
+
+                <!-- Upload Area -->
+                <div id="uploadArea" class="upload-area rounded-xl p-8 text-center cursor-pointer">
+                    <input type="file" id="logoInput" accept="image/*" class="hidden"
+                        onchange="handleLogoUpload(event)">
+                    <i data-lucide="upload-cloud" class="h-12 w-12 text-gray-400 mx-auto mb-3"></i>
+                    <p class="text-gray-600 font-medium mb-1">Click to upload or drag and drop</p>
+                    <p class="text-gray-400 text-sm">PNG, JPG, GIF up to 5MB</p>
+                </div>
+
+                <!-- Instructions -->
+                <div class="mt-8 bg-blue-50 rounded-lg p-4 border border-blue-200">
+                    <h3 class="font-semibold text-primary mb-2 flex items-center gap-2">
+                        <i data-lucide="info" class="h-5 w-5"></i>
+                        Tips for best results:
+                    </h3>
+                    <ul class="text-sm text-gray-700 space-y-1 ml-6 list-disc">
+                        <li>Use a square image for best display</li>
+                        <li> Transparent background (PNG) works best</li>
+                        <li>Keep file size under 5MB for faster loading</li>
+                        <li>The logo will appear in the navigation bar and footer</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Slogan Display -->
+            <div
+                class="mt-8 bg-gradient-to-r from-primary to-blue-800 rounded-2xl shadow-lg p-8 text-white text-center">
+                <h3 class="text-xl font-serif font-bold mb-2">Current Slogan</h3>
+                <p class="text-2xl italic text-accent">"Real Church for Real People"</p>
+                <p class="text-blue-200 text-sm mt-2">This appears automatically with your church name across all pages
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-gray-300 py-8 text-center">
+        <div class="max-w-7xl mx-auto px-4">
+            <p>&copy; 2024 Kingdom's Journey. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+
+        // Setup drag and drop
+        const uploadArea = document.getElementById('uploadArea');
+        const logoInput = document.getElementById('logoInput');
+
+        uploadArea.addEventListener('click', () => logoInput.click());
+
+        uploadArea.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            uploadArea.classList.add('dragover');
+        });
+
+        uploadArea.addEventListener('dragleave', () => {
+            uploadArea.classList.remove('dragover');
+        });
+
+        uploadArea.addEventListener('drop', (e) => {
+            e.preventDefault();
+            uploadArea.classList.remove('dragover');
+            const files = e.dataTransfer.files;
+            if (files.length > 0) {
+                logoInput.files = files;
+                handleLogoUpload({ target: { files: files } });
+            }
+        });
+
+        // Check for existing logo on load
+        window.addEventListener('load', () => {
+            const savedLogo = localStorage.getItem('churchLogo');
+            if (savedLogo) {
+                document.getElementById('currentLogoSection').classList.remove('hidden');
+                document.getElementById('previewLogo').src = savedLogo;
+                document.getElementById('uploadArea').classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kingdom's Journey - Welcome Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e3a8a',
+                        secondary: '#f59e0b',
+                        accent: '#fbbf24',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .fade-in {
+            animation: fadeIn 0.6s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body class="font-sans text-gray-800 bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex-shrink-0 flex items-center gap-3">
+                        <div id="logoContainer"
+                            class="h-10 w-10 flex items-center justify-center overflow-hidden rounded-lg bg-white border-2 border-primary">
+                            <i data-lucide="church" class="h-6 w-6 text-primary logo-fallback"></i>
+                            <img id="siteLogo" class="h-full w-full object-cover hidden" src=""
+                                alt="Kingdom's Journey Logo">
+                        </div>
+                        <div>
+                            <span class="font-serif text-2xl font-bold text-primary block leading-tight">Kingdom's
+                                Journey</span>
+                            <span class="text-xs text-secondary font-semibold italic tracking-wider">Real Church for
+                                Real People</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="index.html"
+                        class="text-primary font-semibold px-3 py-2 rounded-md text-sm transition hover:bg-blue-50">Home</a>
+                    <a href="about.html"
+                        class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition hover:bg-blue-50">About</a>
+                    <a href="services.html"
+                        class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition hover:bg-blue-50">Services</a>
+                    <a href="calendar.html"
+                        class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition hover:bg-blue-50">Calendar</a>
+                    <a href="pastoral-team.html"
+                        class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition hover:bg-blue-50">Pastoral
+                        Team</a>
+                    <a href="watch.html"
+                        class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition hover:bg-blue-50 flex items-center gap-1">
+                        <i data-lucide="video" class="h-4 w-4"></i> Live
+                    </a>
+                    <a href="giving.html"
+                        class="bg-secondary text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-amber-600 transition shadow-md ml-2">Give
+                        Online</a>
+                    <a href="contact.html"
+                        class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition hover:bg-blue-50">Contact</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="flex items-center md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-primary focus:outline-none p-2">
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="text-primary font-semibold block px-3 py-2 rounded-md text-base">Home</a>
+                <a href="about.html" class="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base">About
+                    Us</a>
+                <a href="services.html"
+                    class="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base">Services</a>
+                <a href="calendar.html"
+                    class="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base">Calendar</a>
+                <a href="pastoral-team.html"
+                    class="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base">Pastoral Team</a>
+                <a href="watch.html"
+                    class="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base flex items-center gap-2">
+                    <i data-lucide="video" class="h-4 w-4"></i> Watch Live
+                </a>
+                <a href="giving.html" class="text-secondary font-semibold block px-3 py-2 rounded-md text-base">Give
+                    Online</a>
+                <a href="contact.html"
+                    class="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative bg-primary overflow-hidden hero-pattern">
+        <div class="absolute inset-0">
+            <img src="http://static.photos/people/1200x630/42" alt="Church community"
+                class="w-full h-full object-cover opacity-20">
+            <div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/90 to-primary/70"></div>
+        </div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+            <div class="lg:w-2/3 fade-in">
+                <p class="text-accent font-semibold text-lg mb-4 italic tracking-wide">Real Church for Real People</p>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-6 leading-tight">
+                    Welcome to<br>
+                    <span class="text-white">Kingdom's Journey</span>
+                </h1>
+                <p class="text-xl text-blue-100 mb-8 max-w-2xl leading-relaxed">
+                    A Pentecostal community in Nicholasville, Kentucky, where faith comes alive,
+                    relationships flourish, and lives are transformed by the power of God's love.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="watch.html"
+                        class="inline-flex items-center justify-center bg-secondary hover:bg-amber-600 text-white font-semibold py-3 px-8 rounded-lg transition shadow-lg text-lg">
+                        <i data-lucide="play-circle" class="mr-2 h-5 w-5"></i>
+                        Watch Live
+                    </a>
+                    <a href="services.html"
+                        class="inline-flex items-center justify-center bg-white hover:bg-gray-100 text-primary font-semibold py-3 px-8 rounded-lg transition shadow-lg text-lg">
+                        <i data-lucide="calendar" class="mr-2 h-5 w-5"></i>
+                        Service Times
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Welcome Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-4">Welcome Home</h2>
+                <div class="w-24 h-1 bg-secondary mx-auto rounded-full"></div>
+                <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+                    Whether you're new to faith or have been walking with God for years,
+                    there's a place for you here at Kingdom's Journey.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center p-6 rounded-xl bg-blue-50 hover:bg-blue-100 transition duration-300">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="heart" class="h-8 w-8 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Loving Community</h3>
+                    <p class="text-gray-600">Experience genuine fellowship and build lasting relationships with people
+                        who care.</p>
+                </div>
+                <div class="text-center p-6 rounded-xl bg-amber-50 hover:bg-amber-100 transition duration-300">
+                    <div class="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="book-open" class="h-8 w-8 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Biblical Teaching</h3>
+                    <p class="text-gray-600">Grow in your faith through relevant, scripture-based messages that apply to
+                        everyday life.</p>
+                </div>
+                <div class="text-center p-6 rounded-xl bg-blue-50 hover:bg-blue-100 transition duration-300">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="users" class="h-8 w-8 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Family Focus</h3>
+                    <p class="text-gray-600">From children to seniors, every member of your family will find their place
+                        to belong.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Info Section -->
+    <section class="py-16 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                <div class="p-4">
+                    <i data-lucide="map-pin" class="h-8 w-8 text-secondary mx-auto mb-3"></i>
+                    <h4 class="font-semibold text-lg">Location</h4>
+                    <p class="text-gray-400 mt-1">101 Edgewood Plaza<br>Nicholasville, KY 40356</p>
+                </div>
+                <div class="p-4">
+                    <i data-lucide="clock" class="h-8 w-8 text-secondary mx-auto mb-3"></i>
+                    <h4 class="font-semibold text-lg">Service Times</h4>
+                    <p class="text-gray-400 mt-1">Sunday: 10:30 AM<br>Wednesday: 7:00 PM</p>
+                </div>
+                <div class="p-4">
+                    <i data-lucide="mail" class="h-8 w-8 text-secondary mx-auto mb-3"></i>
+                    <h4 class="font-semibold text-lg">Email</h4>
+                    <p class="text-gray-400 mt-1">Ron@KingdomJourneyKY.com</p>
+                </div>
+                <div class="p-4">
+                    <i data-lucide="video" class="h-8 w-8 text-secondary mx-auto mb-3"></i>
+                    <h4 class="font-semibold text-lg">Live Stream</h4>
+                    <p class="text-gray-400 mt-1">Every Sunday at 10:30 AM</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-br from-primary to-blue-800">
+        <div class="max-w-4xl mx-auto px-4 text-center text-white">
+            <h2 class="text-3xl md:text-4xl font-serif font-bold mb-6">Join Us This Sunday</h2>
+            <p class="text-xl text-blue-100 mb-8">
+                We'd love to meet you and worship together. Come as you are and experience
+                the warmth of our community.
+            </p>
+            <a href="contact.html"
+                class="inline-block bg-white text-primary font-bold py-4 px-10 rounded-full hover:bg-gray-100 transition shadow-lg text-lg">
+                Plan Your Visit
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="col-span-2">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="h-8 w-8 flex items-center justify-center overflow-hidden rounded-lg bg-white">
+                            <i data-lucide="church" class="h-5 w-5 text-primary logo-fallback-footer hidden"></i>
+                            <img id="footerLogo" class="h-full w-full object-cover hidden" src="" alt="Logo">
+                        </div>
+                        <div>
+                            <span class="font-serif text-xl font-bold text-white block">Kingdom's Journey</span>
+                            <span class="text-xs text-secondary italic">Real Church for Real People</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mb-4 max-w-sm">
+                        A Pentecostal church dedicated to spreading the Gospel and building a
+                        community of faith, hope, and love in Nicholasville, Kentucky.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-secondary transition">
+                            <i data-lucide="facebook" class="h-5 w-5"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-secondary transition">
+                            <i data-lucide="youtube" class="h-5 w-5"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-secondary transition">
+                            <i data-lucide="instagram" class="h-5 w-5"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h5 class="text-white font-semibold mb-4">Quick Links</h5>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="hover:text-secondary transition">About Us</a></li>
+                        <li><a href="services.html" class="hover:text-secondary transition">Services</a></li>
+                        <li><a href="calendar.html" class="hover:text-secondary transition">Events</a></li>
+                        <li><a href="giving.html" class="hover:text-secondary transition">Giving</a></li>
+                        <li><a href="admin.html" class="hover:text-secondary transition text-gray-500 text-sm">Admin</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-white font-semibold mb-4">Contact</h5>
+                    <ul class="space-y-2">
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="map-pin" class="h-4 w-4 mt-1 flex-shrink-0"></i>
+                            <span>101 Edgewood Plaza<br>Nicholasville, KY 40356</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="mail" class="h-4 w-4 flex-shrink-0"></i>
+                            <span>Ron@KingdomJourneyKY.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-500">
+                <p>&copy; 2026 Kingdom's Journey. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

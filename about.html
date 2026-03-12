@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Kingdom's Journey</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e3a8a',
+                        secondary: '#f59e0b',
+                        accent: '#fbbf24',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans text-gray-800 bg-gray-50">
+    <!-- Navigation (Same as index) -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex-shrink-0 flex items-center gap-3">
+                        <div
+                            class="logo-container h-10 w-10 flex items-center justify-center overflow-hidden rounded-lg bg-white border-2 border-primary">
+                            <i data-lucide="church" class="h-6 w-6 text-primary logo-fallback"></i>
+                            <img class="site-logo h-full w-full object-cover hidden" src=""
+                                alt="Kingdom's Journey Logo">
+                        </div>
+                        <div>
+                            <span class="font-serif text-2xl font-bold text-primary block leading-tight">Kingdom's
+                                Journey</span>
+                            <span class="text-xs text-secondary font-semibold italic tracking-wider">Real Church for
+                                Real People</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="index.html"
+                        class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition hover:bg-blue-50">Home</a>
+                    <a href="about.html" class="text-primary font-semibold px-3 py-2 rounded-md text-sm">About</a>
+                    <a href="services.html"
+                        class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition hover:bg-blue-50">Services</a>
+                    <a href="calendar.html"
+                        class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition hover:bg-blue-50">Calendar</a>
+                    <a href="pastoral-team.html"
+                        class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition hover:bg-blue-50">Pastoral
+                        Team</a>
+                    <a href="watch.html"
+                        class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition hover:bg-blue-50 flex items-center gap-1">
+                        <i data-lucide="video" class="h-4 w-4"></i> Live
+                    </a>
+                    <a href="giving.html"
+                        class="bg-secondary text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-amber-600 transition shadow-md ml-2">Give
+                        Online</a>
+                    <a href="contact.html"
+                        class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition hover:bg-blue-50">Contact</a>
+                </div>
+
+                <div class="flex items-center md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-primary focus:outline-none p-2">
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="text-gray-700 block px-3 py-2 rounded-md text-base">Home</a>
+                <a href="about.html" class="text-primary font-semibold block px-3 py-2 rounded-md text-base">About
+                    Us</a>
+                <a href="services.html" class="text-gray-700 block px-3 py-2 rounded-md text-base">Services</a>
+                <a href="calendar.html" class="text-gray-700 block px-3 py-2 rounded-md text-base">Calendar</a>
+                <a href="pastoral-team.html" class="text-gray-700 block px-3 py-2 rounded-md text-base">Pastoral
+                    Team</a>
+                <a href="watch.html" class="text-gray-700 block px-3 py-2 rounded-md text-base">Watch Live</a>
+                <a href="giving.html" class="text-secondary font-semibold block px-3 py-2 rounded-md text-base">Give
+                    Online</a>
+                <a href="contact.html" class="text-gray-700 block px-3 py-2 rounded-md text-base">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <div class="bg-primary py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-5xl font-serif font-bold text-white mb-4">About Us</h1>
+            <p class="text-xl text-blue-200 max-w-2xl mx-auto">Discover our story, our mission, and what we believe</p>
+        </div>
+    </div>
+
+    <!-- Our Story -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-serif font-bold text-gray-900 mb-6">Our Story</h2>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        Kingdom's Journey began with a vision to create a place where people from all walks of life
+                        could encounter the life-changing power of Jesus Christ. Founded in Nicholasville, Kentucky,
+                        our church has grown from a small gathering of believers to a vibrant community of faith.
+                    </p>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        We are a Pentecostal church that believes in the power of the Holy Spirit, the authority of
+                        God's Word, and the importance of authentic community. Our desire is to see lives transformed
+                        by the Gospel and to equip believers to fulfill their God-given purpose.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed">
+                        Whether you're taking your first steps in faith or looking for a church home, we welcome you
+                        to join us on this journey of growing deeper in Christ and reaching wider with His love.
+                    </p>
+                </div>
+                <div class="relative">
+                    <img src="http://static.photos/people/640x360/123" alt="Church community"
+                        class="rounded-2xl shadow-2xl w-full">
+                    <div
+                        class="absolute -bottom-6 -right-6 bg-secondary text-white p-6 rounded-xl shadow-lg hidden md:block">
+                        <p class="text-3xl font-bold">10+</p>
+                        <p class="text-sm">Years of Ministry</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="py-16 bg-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="w-14 h-14 bg-primary rounded-full flex items-center justify-center mb-6">
+                        <i data-lucide="target" class="h-7 w-7 text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif font-bold text-gray-900 mb-4">Our Mission</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        To glorify God by making disciples who love God, love people, and transform communities
+                        through the power of the Holy Spirit. We exist to help people know Jesus, grow in faith,
+                        and go serve others.
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="w-14 h-14 bg-secondary rounded-full flex items-center justify-center mb-6">
+                        <i data-lucide="eye" class="h-7 w-7 text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif font-bold text-gray-900 mb-4">Our Vision</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        To be a thriving community of believers who are passionate about worship, committed to
+                        prayer, grounded in Scripture, and engaged in serving our local community and beyond.
+                        We envision multiplying disciples and establishing kingdom influence throughout Kentucky.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Believe -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-serif font-bold text-gray-900 mb-4">What We Believe</h2>
+                <div class="w-24 h-1 bg-secondary mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="p-6 border border-gray-200 rounded-xl hover:shadow-lg transition duration-300">
+                    <i data-lucide="book" class="h-8 w-8 text-primary mb-4"></i>
+                    <h4 class="font-semibold text-lg mb-2">The Bible</h4>
+                    <p class="text-gray-600 text-sm">We believe the Bible is the inspired Word of God and the final
+                        authority for faith and practice.</p>
+                </div>
+                <div class="p-6 border border-gray-200 rounded-xl hover:shadow-lg transition duration-300">
+                    <i data-lucide="cross" class="h-8 w-8 text-primary mb-4"></i>
+                    <h4 class="font-semibold text-lg mb-2">Jesus Christ</h4>
+                    <p class="text-gray-600 text-sm">We believe in the deity of Jesus Christ, His virgin birth, sinless
+                        life, miracles, and sacrificial death.</p>
+                </div>
+                <div class="p-6 border border-gray-200 rounded-xl hover:shadow-lg transition duration-300">
+                    <i data-lucide="wind" class="h-8 w-8 text-primary mb-4"></i>
+                    <h4 class="font-semibold text-lg mb-2">The Holy Spirit</h4>
+                    <p class="text-gray-600 text-sm">We believe in the baptism of the Holy Spirit with evidence of
+                        speaking in tongues and gifts of the Spirit.</p>
+                </div>
+                <div class="p-6 border border-gray-200 rounded-xl hover:shadow-lg transition duration-300">
+                    <i data-lucide="user" class="h-8 w-8 text-primary mb-4"></i>
+                    <h4 class="font-semibold text-lg mb-2">Salvation</h4>
+                    <p class="text-gray-600 text-sm">We believe salvation comes through repentance and faith in Jesus
+                        Christ, resulting in eternal life.</p>
+                </div>
+                <div class="p-6 border border-gray-200 rounded-xl hover:shadow-lg transition duration-300">
+                    <i data-lucide="church" class="h-8 w-8 text-primary mb-4"></i>
+                    <h4 class="font-semibold text-lg mb-2">The Church</h4>
+                    <p class="text-gray-600 text-sm">We believe in the spiritual unity of believers in Christ, called to
+                        worship, fellowship, and service.</p>
+                </div>
+                <div class="p-6 border border-gray-200 rounded-xl hover:shadow-lg transition duration-300">
+                    <i data-lucide="sun" class="h-8 w-8 text-primary mb-4"></i>
+                    <h4 class="font-semibold text-lg mb-2">Second Coming</h4>
+                    <p class="text-gray-600 text-sm">We believe in the imminent return of Jesus Christ and the
+                        resurrection of both saved and lost.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 bg-gray-900 text-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-serif font-bold mb-6">Experience Kingdom's Journey</h2>
+            <p class="text-gray-300 mb-8 text-lg">We'd love to meet you in person. Join us for a service this week!</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="services.html"
+                    class="bg-secondary hover:bg-amber-600 text-white font-semibold py-3 px-8 rounded-lg transition">
+                    Service Times
+                </a>
+                <a href="contact.html"
+                    class="bg-white text-gray-900 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-950 text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p>&copy; 2024 Kingdom's Journey. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Kingdom's Journey</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e3a8a',
+                        secondary: '#f59e0b',
+                        accent: '#fbbf24',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair+Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans text-gray-800 bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex-shrink-0 flex items-center gap-3">
+                        <div
+                            class="logo-container h-10 w-10 flex items-center justify-center overflow-hidden rounded-lg bg-white border-2 border-primary">
+                            <i data-lucide="church" class="h-6 w-6 text-primary logo-fallback"></i>
+                            <img class="site-logo h-full w-full object-cover hidden" src=""
+                                alt="Kingdom's Journey Logo">
+                        </div>
+                        <div>
+                            <span class="font-serif text-2xl font-bold text-primary block leading-tight">Kingdom's
+                                Journey</span>
+                            <span class="text-xs text-secondary font-semibold italic tracking-wider">Real Church for
+                                Real People</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="index.html"
+                        class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition hover:bg-blue-50">Home</a>
+                    <a href="about.html"
+                        class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition hover:bg-blue-50">About</a>
+                    <a href="services.html" class="text-primary font-semibold px-3 py-2 rounded-md text-sm">Services</a>
+                    <a href="calendar.html"
+                        class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition hover:bg-blue-50">Calendar</a>
+                    <a href="pastoral-team.html"
+                        class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition hover:bg-blue-50">Pastoral
+                        Team</a>
+                    <a href="watch.html"
+                        class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition hover:bg-blue-50 flex items-center gap-1">
+                        <i data-lucide="video" class="h-4 w-4"></i> Live
+                    </a>
+                    <a href="giving.html"
+                        class="bg-secondary text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-amber-600 transition shadow-md ml-2">Give
+                        Online</a>
+                    <a href="contact.html"
+                        class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition hover:bg-blue-50">Contact</a>
+                </div>
+
+                <div class="flex items-center md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-primary focus:outline-none p-2">
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="text-gray-700 block px-3 py-2 rounded-md text-base">Home</a>
+                <a href="about.html" class="text-gray-700 block px-3 py-2 rounded-md text-base">About Us</a>
+                <a href="services.html"
+                    class="text-primary font-semibold block px-3 py-2 rounded-md text-base">Services</a>
+                <a href="calendar.html" class="text-gray-700 block px-3 py-2 rounded-md text-base">Calendar</a>
+                <a href="pastoral-team.html" class="text-gray-700 block px-3 py-2 rounded-md text-base">Pastoral
+                    Team</a>
+                <a href="watch.html" class="text-gray-700 block px-3 py-2 rounded-md text-base">Watch Live</a>
+                <a href="giving.html" class="text-secondary font-semibold block px-3 py-2 rounded-md text-base">Give
+                    Online</a>
+                <a href="contact.html" class="text-gray-700 block px-3 py-2 rounded-md text-base">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <div class="bg-primary py-16">
+        <div class="max-w-7xl mx-auto px-4 text-center text-white">
+            <h1 class="text-4xl md:text-5xl font-serif font-bold mb-4">Service Times</h1>
+            <p class="text-xl text-blue-200">Join us for worship, prayer, and fellowship</p>
+        </div>
+    </div>
+
+    <!-- Regular Services -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-serif font-bold text-gray-900 mb-4">Weekly Services</h2>
+                <div class="w-24 h-1 bg-secondary mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Sunday Service -->
+                <div
+                    class="bg-gradient-to-br from-blue-50 to-white border-2 border-blue-100 rounded-2xl p-8 hover:shadow-xl transition duration-300 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-primary opacity-5 rounded-full -mr-16 -mt-16"></div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                            <i data-lucide="sun" class="h-6 w-6 text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900">Sunday Service</h3>
+                            <p class="text-secondary font-semibold">Main Worship</p>
+                        </div>
+                    </div>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center gap-2 text-gray-700">
+                            <i data-lucide="clock" class="h-5 w-5 text-primary"></i>
+                            <span class="font-medium">10:30 AM</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-gray-700">
+                            <i data-lucide="map-pin" class="h-5 w-5 text-primary"></i>
+                            <span>101 Edgewood Plaza, Nicholasville</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">
+                        Join us every Sunday for dynamic worship, relevant teaching from God's Word,
+                        and a welcoming atmosphere for the whole family.
+                    </p>
+                    <div class="flex gap-2 flex-wrap">
+                        <span class="bg-blue-100 text-primary text-xs px-3 py-1 rounded-full">Worship</span>
+                        <span class="bg-blue-100 text-primary text-xs px-3 py-1 rounded-full">Children's Ministry</span>
+                        <span class="bg-blue-100 text-primary text-xs px-3 py-1 rounded-full">Refreshments</span>
+                    </div>
+                </div>
+
+                <!-- Wednesday Service -->
+                <div
+                    class="bg-gradient-to-br from-amber-50 to-white border-2 border-amber-100 rounded-2xl p-8 hover:shadow-xl transition duration-300 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-secondary opacity-5 rounded-full -mr-16 -mt-16">
+                    </div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center">
+                            <i data-lucide="book-open" class="h-6 w-6 text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900">Wednesday Service</h3>
+                            <p class="text-secondary font-semibold">Bible Study & Prayer</p>
+                        </div>
+                    </div>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center gap-2 text-gray-700">
+                            <i data-lucide="clock" class="h-5 w-5 text-secondary"></i>
+                            <span class="font-medium">7:00 PM</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-gray-700">
+                            <i data-lucide="map-pin" class="h-5 w-5 text-secondary"></i>
+                            <span>101 Edgewood Plaza, Nicholasville</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">
+                        Mid-week recharge with in-depth Bible study, prayer time, and deeper fellowship.
+                        A perfect way to stay connected and grounded throughout the week.
+                    </p>
+                    <div class="flex gap-2 flex-wrap">
+                        <span class="bg-amber-100 text-secondary text-xs px-3 py-1 rounded-full">Bible Study</span>
+                        <span class="bg-amber-100 text-secondary text-xs px-3 py-1 rounded-full">Prayer</span>
+                        <span class="bg-amber-100 text-secondary text-xs px-3 py-1 rounded-full">Discussion</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What to Expect -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-serif font-bold text-gray-900 mb-4">What to Expect</h2>
+                <div class="w-24 h-1 bg-secondary mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="music" class="h-8 w-8 text-white"></i>
+                    </div>
+                    <h4 class="font-semibold text-lg mb-2">Contemporary Worship</h4>
+                    <p class="text-gray-600 text-sm">Energetic, Spirit-filled music that honors God and prepares hearts
+                        for the message.</p>
+                </div>
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="message-circle" class="h-8 w-8 text-white"></i>
+                    </div>
+                    <h4 class="font-semibold text-lg mb-2">Relevant Teaching</h4>
+                    <p class="text-gray-600 text-sm">Practical, Bible-based messages that speak to real-life challenges
+                        and opportunities.</p>
+                </div>
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="baby" class="h-8 w-8 text-white"></i>
+                    </div>
+                    <h4 class="font-semibold text-lg mb-2">Kids Ministry</h4>
+                    <p class="text-gray-600 text-sm">Safe, fun, and age-appropriate environments where children learn
+                        about Jesus.</p>
+                </div>
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="coffee" class="h-8 w-8 text-white"></i>
+                    </div>
+                    <h4 class="font-semibold text-lg mb-2">Fellowship Time</h4>
+                    <p class="text-gray-600 text-sm">Connect with others over coffee and refreshments before and after
+                        services.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Stream Notice -->
+    <section class="py-16 bg-primary text-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <i data-lucide="video" class="h-16 w-16 mx-auto mb-6 text-secondary"></i>
+            <h2 class="text-3xl font-serif font-bold mb-4">Can't Make It In Person?</h2>
+            <p class="text-lg text-blue-200 mb-8">
+                Join us online every Sunday at 10:30 AM for our live stream.
+                Experience worship and the message from wherever you are.
+            </p>
+            <a href="watch.html"
+                class="inline-block bg-secondary hover:bg-amber-600 text-white font-bold py-4 px-8 rounded-lg transition shadow-lg">
+                Watch Live Online
+            </a>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-gray-300 py-8 text-center">
+        <div class="max-w-7xl mx-auto px-4">
+            <p>&copy; 2024 Kingdom's Journey. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+
+</html>
