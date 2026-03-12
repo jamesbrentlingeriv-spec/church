@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch Live - Kingdom's Journey</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e3a8a',
+                        secondary: '#f59e0b',
+                        accent: '#fbbf24',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body class="font-sans text-gray-800 bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex-shrink-0 flex items-center gap-3">
+                        <div
+                            class="logo-container h-10 w-10 flex items-center justify-center overflow-hidden rounded-lg bg-white border-2 border-primary">
+                            <i data-lucide="church" class="h-6 w-6 text-primary logo-fallback hidden"></i>
+                            <img class="site-logo h-full w-full object-cover" src="output_ocyovl.png"
+                                alt="Kingdom's Journey Logo">
+                        </div>
+                        <div>
+                            <span class="font-serif text-2xl font-bold text-primary block leading-tight">Kingdom's
+                                Journey</span>
+                            <span class="text-xs text-secondary font-semibold italic tracking-wider">Real Church for
+                                Real People</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="index.html"
+                        class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition hover:bg-blue-50">Home</a>
+                    <a href="about.html"
+                        class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition hover:bg-blue-50">About</a>
+                    <a href="services.html"
+                        class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition hover:bg-blue-50">Services</a>
+                    <a href="calendar.html"
+                        class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition hover:bg-blue-50">Calendar</a>
+                    <a href="pastoral-team.html"
+                        class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition hover:bg-blue-50">Pastoral
+                        Team</a>
+                    <a href="watch.html"
+                        class="text-primary font-semibold px-3 py-2 rounded-md text-sm flex items-center gap-1">
+                        <i data-lucide="video" class="h-4 w-4"></i> Live
+                    </a>
+                    <a href="giving.html"
+                        class="bg-secondary text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-amber-600 transition shadow-md ml-2">Give
+                        Online</a>
+                    <a href="contact.html"
+                        class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition hover:bg-blue-50">Contact</a>
+                </div>
+
+                <div class="flex items-center md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-primary focus:outline-none p-2">
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="text-gray-700 block px-3 py-2 rounded-md text-base">Home</a>
+                <a href="about.html" class="text-gray-700 block px-3 py-2 rounded-md text-base">About Us</a>
+                <a href="services.html" class="text-gray-700 block px-3 py-2 rounded-md text-base">Services</a>
+                <a href="calendar.html" class="text-gray-700 block px-3 py-2 rounded-md text-base">Calendar</a>
+                <a href="pastoral-team.html" class="text-gray-700 block px-3 py-2 rounded-md text-base">Pastoral
+                    Team</a>
+                <a href="watch.html" class="text-primary font-semibold block px-3 py-2 rounded-md text-base">Watch
+                    Live</a>
+                <a href="giving.html" class="text-secondary font-semibold block px-3 py-2 rounded-md text-base">Give
+                    Online</a>
+                <a href="contact.html" class="text-gray-700 block px-3 py-2 rounded-md text-base">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <div class="bg-primary py-16">
+        <div class="max-w-7xl mx-auto px-4 text-center text-white">
+            <h1 class="text-4xl md:text-5xl font-serif font-bold mb-4">Watch Live</h1>
+            <p class="text-xl text-blue-200">Join us online from anywhere in the world</p>
+        </div>
+    </div>
+
+    <!-- Live Stream Section -->
+    <section class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Live Video Player -->
+            <div class="bg-gray-900 rounded-2xl overflow-hidden shadow-2xl mb-8">
+                <div class="video-container rounded-2xl">
+                    <!-- Placeholder for live stream - replace with actual embed code -->
+                    <div class="absolute inset-0 flex items-center justify-center text-center p-8">
+                        <div>
+                            <div class="flex items-center justify-center gap-2 mb-4">
+                                <span class="w-3 h-3 bg-red-500 rounded-full animate-pulse"></span>
+                                <span class="text-red-500 font-semibold uppercase tracking-wider text-sm">Live Stream
+                                    Placeholder</span>
+                            </div>
+                            <i data-lucide="video" class="h-16 w-16 text-gray-600 mx-auto mb-4"></i>
+                            <p class="text-white text-xl mb-2">Live Stream Player</p>
+                            <p class="text-gray-400 mb-6">Embed your live stream here (YouTube, Facebook, Vimeo, etc.)
+                            </p>
+                            <a href="#"
+                                class="bg-secondary hover:bg-amber-600 text-white px-6 py-3 rounded-lg font-medium transition inline-flex items-center gap-2">
+                                <i data-lucide="play" class="h-5 w-5"></i>
+                                Start Watching
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6 md:p-8">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                        <div>
+                            <h2 class="text-2xl font-bold text-white mb-2">Sunday Morning Service</h2>
+                            <p class="text-gray-400">Every Sunday at 10:30 AM EST</p>
+                        </div>
+                        <div class="flex gap-3">
+                            <button
+                                class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg transition flex items-center gap-2 text-sm font-medium">
+                                <i data-lucide="youtube" class="h-5 w-5"></i>
+                                Subscribe on YouTube
+                            </button>
+                            <button
+                                class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition flex items-center gap-2 text-sm font-medium">
+                                <i data-lucide="facebook" class="h-5 w-5"></i>
+                                Follow on Facebook
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Schedule -->
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Live Service Times -->
+                <div class="bg-blue-50 rounded-xl p-8 border border-blue-100">
+                    <h3 class="text-xl font-bold text-primary mb-4 flex items-center gap-2">
+                        <i data-lucide="calendar" class="h-6 w-6"></i>
+                        Live Service Times
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4 p-4 bg-white rounded-lg">
+                            <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="sun" class="h-6 w-6 text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Sunday Service</h4>
+                                <p class="text-gray-600">10:30 AM EST</p>
+                                <p class="text-sm text-primary mt-1">Live Stream Available</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 p-4 bg-white rounded-lg opacity-60">
+                            <div
+                                class="w-12 h-12 bg-gray-400 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="book-open" class="h-6 w-6 text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Wednesday Bible Study</h4>
+                                <p class="text-gray-600">7:00 PM EST</p>
+                                <p class="text-sm text-gray-500 mt-1">In-Person Only</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Previous Messages -->
+                <div class="bg-white rounded-xl p-8 border border-gray-200 shadow-sm">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                        <i data-lucide="play-circle" class="h-6 w-6 text-secondary"></i>
+                        Recent Messages
+                    </h3>
+                    <div class="space-y-3">
+                        <a href="#"
+                            class="block p-4 border border-gray-200 rounded-lg hover:border-primary hover:shadow-md transition group">
+                            <div class="flex items-center gap-3">
+                                <div
+                                    class="w-16 h-12 bg-gray-200 rounded-lg flex items-center justify-center group-hover:bg-primary transition">
+                                    <i data-lucide="play"
+                                        class="h-5 w-5 text-gray-400 group-hover:text-white transition"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <h4 class="font-medium text-gray-900 group-hover:text-primary transition">Walking in
+                                        Faith</h4>
+                                    <p class="text-sm text-gray-500">Pastor Ron • Dec 15, 2024</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#"
+                            class="block p-4 border border-gray-200 rounded-lg hover:border-primary hover:shadow-md transition group">
+                            <div class="flex items-center gap-3">
+                                <div
+                                    class="w-16 h-12 bg-gray-200 rounded-lg flex items-center justify-center group-hover:bg-primary transition">
+                                    <i data-lucide="play"
+                                        class="h-5 w-5 text-gray-400 group-hover:text-white transition"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <h4 class="font-medium text-gray-900 group-hover:text-primary transition">The Power
+                                        of Prayer</h4>
+                                    <p class="text-sm text-gray-500">Pastor Ron • Dec 8, 2024</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#"
+                            class="block p-4 border border-gray-200 rounded-lg hover:border-primary hover:shadow-md transition group">
+                            <div class="flex items-center gap-3">
+                                <div
+                                    class="w-16 h-12 bg-gray-200 rounded-lg flex items-center justify-center group-hover:bg-primary transition">
+                                    <i data-lucide="play"
+                                        class="h-5 w-5 text-gray-400 group-hover:text-white transition"></i>
+                                </div>
+                                <div class="flex-1">
+                                    <h4 class="font-medium text-gray-900 group-hover:text-primary transition">Living
+                                        with Purpose</h4>
+                                    <p class="text-sm text-gray-500">Pastor Ron • Dec 1, 2024</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <a href="#"
+                        class="text-primary hover:text-secondary font-medium text-sm mt-4 inline-flex items-center gap-1">
+                        View All Messages <i data-lucide="arrow-right" class="h-4 w-4"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="col-span-2">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="h-8 w-8 flex items-center justify-center overflow-hidden rounded-lg bg-white">
+                            <i data-lucide="church" class="h-5 w-5 text-primary logo-fallback-footer hidden"></i>
+                            <img id="footerLogo" class="h-full w-full object-cover" src="output_ocyovl.png" alt="Logo">
+                        </div>
+                        <div>
+                            <span class="font-serif text-xl font-bold text-white block">Kingdom's Journey</span>
+                            <span class="text-xs text-secondary italic">Real Church for Real People</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm">
+                        A Pentecostal church dedicated to spreading the Gospel and building a
+                        community of faith, hope, and love in Nicholasville, Kentucky.
+                    </p>
+                </div>
+                <div>
+                    <h5 class="text-white font-semibold mb-4">Quick Links</h5>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="about.html" class="hover:text-secondary transition">About Us</a></li>
+                        <li><a href="services.html" class="hover:text-secondary transition">Services</a></li>
+                        <li><a href="calendar.html" class="hover:text-secondary transition">Events</a></li>
+                        <li><a href="giving.html" class="hover:text-secondary transition">Giving</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-white font-semibold mb-4">Contact</h5>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="map-pin" class="h-4 w-4 mt-1 flex-shrink-0"></i>
+                            <span>101 Edgewood Plaza<br>Nicholasville, KY 40356</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="mail" class="h-4 w-4 flex-shrink-0"></i>
+                            <span>Ron@KingdomJourneyKY.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-500">
+                <p>&copy; 2024 Kingdom's Journey. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+
+</html>

@@ -14,8 +14,11 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Logo Management
+// Updated Logo Management in script.js
 function loadLogo() {
-  const savedLogo = localStorage.getItem("churchLogo");
+  // Use the uploaded image file name
+  const logoPath = "output_ocyovl.png";
+
   const logoContainers = document.querySelectorAll(
     ".logo-container, #logoContainer",
   );
@@ -26,20 +29,27 @@ function loadLogo() {
     ".logo-fallback, .logo-fallback-footer",
   );
 
-  if (savedLogo) {
-    logoImages.forEach((img) => {
-      img.src = savedLogo;
-      img.classList.remove("hidden");
-    });
-    fallbacks.forEach((icon) => {
-      icon.classList.add("hidden");
-    });
-    logoContainers.forEach((container) => {
-      container.classList.remove("bg-white", "border-2", "border-primary");
-      container.style.backgroundColor = "transparent";
-      container.style.border = "none";
-    });
-  }
+  // Set the logo source for all logo elements
+  logoImages.forEach((img) => {
+    img.src = logoPath;
+    img.classList.remove("hidden");
+  });
+
+  // Hide the fallback icons (like the Lucide church icon)
+  fallbacks.forEach((icon) => {
+    icon.classList.add("hidden");
+  });
+
+  // Prepare containers for the star hover effect
+  logoContainers.forEach((container) => {
+    // This class will be targeted by your CSS for the star effect
+    container.classList.add("logo-star-target");
+
+    // Remove default styling to ensure the image and effect are clear
+    container.classList.remove("bg-white", "border-2", "border-primary");
+    container.style.backgroundColor = "transparent";
+    container.style.border = "none";
+  });
 }
 
 function handleLogoUpload(event) {
