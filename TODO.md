@@ -1,15 +1,21 @@
-# Contact Page Map Update (Feedback Task)
+# Admin Dashboard Task (New Request)
 
 ## Steps:
 
-1. [x] Reset/create new TODO.md for map feature
-2. [x] Add Leaflet CDNs to contact.html head
-3. [x] Insert map container div after Facebook section
-4. [x] Add map init script before </body>
-5. [x] Update TODO.md progress
-6. [ ] Preview updated page
+1. [x] Create TODO.md for tracking
+2. [x] Update calendar.html: remove Add Event btn, add Admin btn bottom-right
+       header with login redirect
+3. [x] Transform admin.html into full dashboard for calendar events + watch
+       video embed
+4. [x] Update watch.html to load embedded video URL from localStorage
+5. [x] Update calendar.js to support admin event management
+6. [x] Test login flow, event add, video embed
+7. [x] Mark complete + preview
 
-Current status: Map implementation complete. Leaflet map added below Facebook
-with custom output_ocyovl.png marker at 37.9009, -84.5688 (corrected for 101
-Edgewood Plaza Nicholasville, KY 40356). Popup with address. Preview command
-executed.
+**✅ Task Complete** - Admin system live:
+
+- Calendar: Subtle Admin button in header (bottom right)
+- Admin login: pastorron/godisgood → dashboard
+- Admin dashboard: Add/edit calendar events, set live video URL
+- Watch.html: Dynamic embed from localStorage
+- All pages opened in browser for testing.

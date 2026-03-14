@@ -132,11 +132,16 @@
             <!-- Live Video Player -->
             <div class="bg-gray-900 rounded-2xl overflow-hidden shadow-2xl mb-8">
                 <div class="video-container rounded-2xl">
-                    <video id="serviceVideo" class="w-full h-full object-cover" poster="output_ocyovl.png" controls
-                        preload="metadata" playsinline>
-                        <source src="churchservice.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
+                    <iframe id="liveVideoPlayer" class="w-full h-full"
+                        src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1" title="Live Stream"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                    <script>
+                        const savedUrl = localStorage.getItem('liveVideoUrl') || 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1';
+                        document.getElementById('liveVideoPlayer').src = savedUrl;
+                    </script>
                 </div>
                 <div class="p-6 md:p-8">
                     <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">

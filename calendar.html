@@ -124,11 +124,16 @@
     </nav>
 
     <!-- Header -->
-    <div class="bg-primary py-16">
+    <div class="bg-primary py-16 relative">
         <div class="max-w-7xl mx-auto px-4 text-center text-white">
             <h1 class="text-4xl md:text-5xl font-serif font-bold mb-4">Church Calendar</h1>
             <p class="text-xl text-blue-200">Stay up to date with upcoming events and activities</p>
         </div>
+        <button id="adminBtn"
+            class="absolute bottom-4 right-4 bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white px-4 py-2 rounded-lg font-medium flex items-center gap-2 border border-white/30 transition-all duration-300 hover:scale-105 shadow-xl">
+            <i data-lucide="shield" class="h-5 w-5"></i>
+            Admin
+        </button>
     </div>
 
     <!-- Calendar Section -->
@@ -147,11 +152,7 @@
                             <i data-lucide="chevron-right" class="h-6 w-6 text-primary"></i>
                         </button>
                     </div>
-                    <button id="addEventBtn" onclick="openEventModalWithCheck()"
-                        class="bg-secondary hover:bg-amber-600 text-white px-6 py-2 rounded-lg font-medium transition flex items-center gap-2">
-                        <i data-lucide="plus" class="h-5 w-5"></i>
-                        Add Event (Admin)
-                    </button>
+
 
                 </div>
             </div>
@@ -282,3 +283,17 @@
 
     <script src="script.js"></script>
     <script src="calendar.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('adminBtn').addEventListener('click', function () {
+                const username = prompt('Admin Username:');
+                const password = prompt('Admin Password:');
+                if (username === 'pastorron' && password === 'godisgood') {
+                    localStorage.setItem('adminLoggedIn', 'true');
+                    window.location.href = 'admin.html';
+                } else {
+                    alert('Invalid credentials');
+                }
+            });
+        });
+    </script>
