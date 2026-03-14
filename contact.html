@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Kingdom Journey</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e3a8a',
+                        secondary: '#f59e0b',
+                        accent: '#fbbf24',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans text-gray-800 bg-gray-50">
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex-shrink-0 flex items-center gap-3">
+                        <div
+                            class="logo-container h-10 w-10 flex items-center justify-center overflow-hidden rounded-lg bg-white border-2 border-primary">
+                            <img class="site-logo h-full w-full object-cover" src="output_ocyovl.png"
+                                alt="Kingdom's Journey Logo">
+                        </div>
+                        <div>
+                            <span class="font-serif text-2xl font-bold text-primary block leading-tight">Kingdom
+                                Journey</span>
+                            <span class="text-xs text-secondary font-semibold italic tracking-wider">Real Church for
+                                Real People</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="index.html"
+                        class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition hover:bg-blue-50">Home</a>
+                    <a href="about.html"
+                        class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition hover:bg-blue-50">About</a>
+                    <a href="services.html"
+                        class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition hover:bg-blue-50">Services</a>
+                    <a href="calendar.html"
+                        class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition hover:bg-blue-50">Calendar</a>
+                    <a href="pastoral-team.html"
+                        class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition hover:bg-blue-50">Pastoral
+                        Team</a>
+                    <a href="watch.html"
+                        class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition hover:bg-blue-50 flex items-center gap-1">
+                        <i data-lucide="video" class="h-4 w-4"></i> Live
+                    </a>
+                    <a href="giving.html"
+                        class="bg-secondary text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-amber-600 transition shadow-md ml-2">Give
+                        Online</a>
+                    <a href="contact.html" class="text-primary font-semibold px-3 py-2 rounded-md text-sm">Contact</a>
+                </div>
+
+                <div class="flex items-center md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-primary focus:outline-none p-2">
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="bg-primary py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-5xl font-serif font-bold text-white mb-4">Connect With Us</h1>
+            <p class="text-xl text-blue-200 max-w-2xl mx-auto">Have questions? We are here to listen and pray with you.
+            </p>
+        </div>
+    </div>
+
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-3 gap-12">
+
+                <div class="lg:col-span-1 space-y-8">
+                    <div>
+                        <h2 class="text-3xl font-serif font-bold text-gray-900 mb-6">Get In Touch</h2>
+                        <p class="text-gray-600 mb-8">Whether you’re looking for a new church home or just have a few
+                            questions, our team is ready to assist you.</p>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center shrink-0">
+                                <i data-lucide="map-pin" class="h-6 w-6 text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Our Location</h4>
+                                <p class="text-gray-600">101 Edgewood Plaza Nicholasville, KY 40356</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center shrink-0">
+                                <i data-lucide="mail" class="h-6 w-6 text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Email Address</h4>
+                                <p class="text-gray-600">Ron@KingdomJourneyKY.com</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center shrink-0">
+                                <i data-lucide="facebook" class="h-6 w-6 text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Facebook</h4>
+                                <p class="text-gray-600 flex items-center gap-2">
+                                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#1877F2">
+                                        <path
+                                            d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                                    </svg>
+                                    <a href="https://www.facebook.com/KingdomJourneyMinistries" target="_blank"
+                                        class="hover:text-primary font-medium">Kingdom Journey Facebook</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div id="map" class="w-full h-80 rounded-xl bg-gray-200 mt-6 shadow-sm"></div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-2">
+                    <div class="bg-gray-50 p-8 rounded-2xl border border-gray-100 shadow-sm">
+                        <form action="#" method="POST" class="grid md:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label class="text-sm font-semibold text-gray-700">First Name</label>
+                                <input type="text"
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition"
+                                    placeholder="John">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-sm font-semibold text-gray-700">Last Name</label>
+                                <input type="text"
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition"
+                                    placeholder="Doe">
+                            </div>
+                            <div class="md:col-span-2 space-y-2">
+                                <label class="text-sm font-semibold text-gray-700">Email Address</label>
+                                <input type="email"
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition"
+                                    placeholder="john@example.com">
+                            </div>
+                            <div class="md:col-span-2 space-y-2">
+                                <label class="text-sm font-semibold text-gray-700">Subject</label>
+                                <select
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition">
+                                    <option>General Inquiry</option>
+                                    <option>Prayer Request</option>
+                                    <option>Membership</option>
+                                    <option>Volunteering</option>
+                                </select>
+                            </div>
+                            <div class="md:col-span-2 space-y-2">
+                                <label class="text-sm font-semibold text-gray-700">Message</label>
+                                <textarea rows="4"
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition"
+                                    placeholder="How can we help you?"></textarea>
+                            </div>
+                            <div class="md:col-span-2">
+                                <button type="submit"
+                                    class="w-full bg-primary hover:bg-blue-900 text-white font-bold py-4 rounded-lg transition shadow-lg">
+                                    Send Message
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-950 text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p>&copy; 2026 Kingdom Journey. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>lucide.createIcons();</script>
+    <script>
+        // Init map when DOM ready
+        document.addEventListener('DOMContentLoaded', function () {
+            const map = L.map('map').setView([37.9009, -84.5688], 17);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+
+            const logoIcon = L.divIcon({
+                className: 'custom-marker',
+                html: '<img src="output_ocyovl.png" style="width: 40px; height: 40px; border-radius: 50%; border: 3px solid white; box-shadow: 0 2px 8px rgba(0,0,0,0.3);">',
+                iconSize: [40, 40],
+                iconAnchor: [20, 40],
+                popupAnchor: [0, -40]
+            });
+
+            L.marker([37.9009, -84.5688], { icon: logoIcon }).addTo(map)
+                .bindPopup('<b>Kingdom Journey</b><br>101 Edgewood Plaza<br>Nicholasville, KY 40356');
+        });
+    </script>
+</body>
+
+</html>
