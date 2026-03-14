@@ -12,6 +12,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap"
         rel="stylesheet">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
     <script>
         tailwind.config = {
             theme: {
@@ -145,11 +147,12 @@
                             <i data-lucide="chevron-right" class="h-6 w-6 text-primary"></i>
                         </button>
                     </div>
-                    <button onclick="openEventModal()"
+                    <button onclick="openEventModalWithCheck()"
                         class="bg-secondary hover:bg-amber-600 text-white px-6 py-2 rounded-lg font-medium transition flex items-center gap-2">
                         <i data-lucide="plus" class="h-5 w-5"></i>
                         Add Event (Admin)
                     </button>
+
                 </div>
             </div>
 
@@ -201,6 +204,7 @@
                 </button>
             </div>
             <form id="loginForm" class="space-y-4">
+
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-2">Username</label>
                     <input type="text" id="adminUsername" required
@@ -216,7 +220,8 @@
                     Login
                 </button>
             </form>
-            <p class="text-xs text-gray-500 mt-4 text-center">Demo: admin / password</p>
+            <p class="text-xs text-gray-500 mt-4 text-center">Demo: pastorron / godisgood</p>
+
         </div>
     </div>
 
@@ -227,136 +232,183 @@
                 <button onclick="closeEventModal()" class="text-gray-400 hover:text-gray-600">
                     <i data-lucide="x" class="h-6 w-6"></i>
                 </button>
-                </form>
-                <form id="eventForm" class="space-y-4">
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Event Title</label>
-                        <input type="text" id="eventTitle" required
-                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Date</label>
-                        <input type="date" id="eventDate" required
-                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Time</label>
-                        <input type="time" id="eventTime"
-                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Description</label>
-                        <textarea id="eventDescription" rows="3"
-                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none"></textarea>
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Category</label>
-                        <select id="eventCategory"
-                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none">
-                            <option value="service">Service</option>
-                            <option value="fellowship">Fellowship</option>
-                            <option value="outreach">Outreach</option>
-                            <option value="prayer">Prayer</option>
-                            <option value="special">Special Event</option>
-                        </select>
-                    </div>
-                    <button type="submit"
-                        class="w-full bg-secondary hover:bg-amber-600 text-white font-semibold py-3 rounded-lg transition">
-                        Add Event
-                    </button>
-                </form>
             </div>
+            <form id="eventForm" class="space-y-4">
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Event Title</label>
+                    <input type="text" id="eventTitle" required
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Date</label>
+                    <input type="date" id="eventDate" required
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Time</label>
+                    <input type="time" id="eventTime"
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Description</label>
+                    <textarea id="eventDescription" rows="3"
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none"></textarea>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Category</label>
+                    <select id="eventCategory"
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none">
+                        <option value="service">Service</option>
+                        <option value="fellowship">Fellowship</option>
+                        <option value="outreach">Outreach</option>
+                        <option value="prayer">Prayer</option>
+                        <option value="special">Special Event</option>
+                    </select>
+                </div>
+                <button type="submit"
+                    class="w-full bg-secondary hover:bg-amber-600 text-white font-semibold py-3 rounded-lg transition">
+                    Add Event
+                </button>
+            </form>
         </div>
+    </div>
 
-        <footer class="bg-gray-900 text-gray-300 py-8 text-center mt-12">
-            <div class="max-w-7xl mx-auto px-4">
-                <p>&copy; 2024 Kingdom's Journey. All rights reserved.</p>
-            </div>
-        </footer>
+    <footer class="bg-gray-900 text-gray-300 py-8 text-center mt-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <p>&copy; 2024 Kingdom's Journey. All rights reserved.</p>
+        </div>
+    </footer>
 
-        <script src="script.js"></script>
-        <script>
-            // Calendar specific JavaScript
-            let currentDate = new Date();
-            let events = JSON.parse(localStorage.getItem('churchEvents')) || [];
+    <script src="script.js"></script>
+    <script>
+        // Calendar specific JavaScript
+        // Admin functions
+        function openEventModalWithCheck() {
+            if (localStorage.getItem('adminLoggedIn') !== 'true') {
+                openLoginModal();
+                return;
+            }
+            openEventModal();
+        }
 
-            const monthNames = ["January", "February", "March", "April", "May", "June",
-                "July", "August", "September", "October", "November", "December"
-            ];
+        function logoutAdmin() {
+            localStorage.removeItem('adminLoggedIn');
+            alert('Logged out successfully');
+        }
 
-            function renderCalendar() {
-                const year = currentDate.getFullYear();
-                const month = currentDate.getMonth();
+        function addEvent(e) {
+            e.preventDefault();
+            const eventData = {
+                id: Date.now().toString(),
+                title: document.getElementById('eventTitle').value,
+                date: document.getElementById('eventDate').value,
+                time: document.getElementById('eventTime').value,
+                description: document.getElementById('eventDescription').value,
+                category: document.getElementById('eventCategory').value
+            };
+            events.push(eventData);
+            localStorage.setItem('churchEvents', JSON.stringify(events));
+            closeEventModal();
+            renderCalendar();
+            renderEventsList();
+            alert('Event added successfully!');
+        }
 
-                // Update month display
-                document.getElementById('currentMonth').textContent = `${monthNames[month]} ${year}`;
+        document.getElementById('eventForm').addEventListener('submit', addEvent);
 
-                const firstDay = new Date(year, month, 1).getDay();
-                const daysInMonth = new Date(year, month + 1, 0).getDate();
+        // Add logout button if admin (optional indicator)
+        if (localStorage.getItem('adminLoggedIn') === 'true') {
+            const controls = document.querySelector('.flex.flex-col.md\\:flex-row');
+            const logoutBtn = document.createElement('button');
+            logoutBtn.onclick = logoutAdmin;
+            logoutBtn.className = 'bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg font-medium transition flex items-center gap-2 ml-2';
+            logoutBtn.innerHTML = '<i data-lucide="log-out" class="h-4 w-4"></i> Logout';
+            controls.appendChild(logoutBtn);
+            lucide.createIcons(logoutBtn);
+        }
 
-                const grid = document.getElementById('calendarGrid');
-                grid.innerHTML = '';
+        let currentDate = new Date();
+        let events = JSON.parse(localStorage.getItem('churchEvents')) || [];
 
-                // Empty cells for days before start of month
-                for (let i = 0; i < firstDay; i++) {
-                    const div = document.createElement('div');
-                    div.className = 'p-2';
-                    grid.appendChild(div);
-                }
 
-                // Days
-                for (let day = 1; day <= daysInMonth; day++) {
-                    const dateStr = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
-                    const dayEvents = events.filter(e => e.date === dateStr);
-                    const hasEvents = dayEvents.length > 0;
+        const monthNames = ["January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December"
+        ];
 
-                    const div = document.createElement('div');
-                    div.className = `calendar-day p-2 rounded-lg border cursor-pointer transition hover:shadow-md ${hasEvents ? 'bg-blue-50 border-primary' : 'border-gray-200 hover:border-primary'}`;
+        function renderCalendar() {
+            const year = currentDate.getFullYear();
+            const month = currentDate.getMonth();
 
-                    let html = `<span class="font-semibold ${hasEvents ? 'text-primary' : 'text-gray-700'}">${day}</span>`;
+            // Update month display
+            document.getElementById('currentMonth').textContent = `${monthNames[month]} ${year}`;
 
-                    if (hasEvents) {
-                        html += `<div class="flex gap-1 mt-1 flex-wrap">`;
-                        dayEvents.forEach(event => {
-                            const color = getCategoryColor(event.category);
-                            html += `<div class="w-2 h-2 rounded-full ${color}"></div>`;
-                        });
-                        html += `</div>`;
-                    }
+            const firstDay = new Date(year, month, 1).getDay();
+            const daysInMonth = new Date(year, month + 1, 0).getDate();
 
-                    div.innerHTML = html;
-                    div.onclick = () => showDateEvents(dateStr);
-                    grid.appendChild(div);
-                }
+            const grid = document.getElementById('calendarGrid');
+            grid.innerHTML = '';
+
+            // Empty cells for days before start of month
+            for (let i = 0; i < firstDay; i++) {
+                const div = document.createElement('div');
+                div.className = 'p-2';
+                grid.appendChild(div);
             }
 
-            function getCategoryColor(category) {
-                const colors = {
-                    service: 'bg-primary',
-                    fellowship: 'bg-green-500',
-                    outreach: 'bg-orange-500',
-                    prayer: 'bg-purple-500',
-                    special: 'bg-secondary'
-                };
-                return colors[category] || 'bg-gray-500';
-            }
+            // Days
+            for (let day = 1; day <= daysInMonth; day++) {
+                const dateStr = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+                const dayEvents = events.filter(e => e.date === dateStr);
+                const hasEvents = dayEvents.length > 0;
 
-            function renderEventsList() {
-                const month = currentDate.getMonth();
-                const year = currentDate.getFullYear();
-                const monthEvents = events.filter(e => {
-                    const d = new Date(e.date);
-                    return d.getMonth() === month && d.getFullYear() === year;
-                }).sort((a, b) => new Date(a.date) - new Date(b.date));
+                const div = document.createElement('div');
+                div.className = `calendar-day p-2 rounded-lg border cursor-pointer transition hover:shadow-md ${hasEvents ? 'bg-blue-50 border-primary' : 'border-gray-200 hover:border-primary'}`;
 
-                const list = document.getElementById('eventsList');
+                let html = `<span class="font-semibold ${hasEvents ? 'text-primary' : 'text-gray-700'}">${day}</span>`;
 
-                if (monthEvents.length === 0) {
-                    list.innerHTML = '<p class="text-gray-500 text-center py-4">No events this month</p>';
-                    return;
+                if (hasEvents) {
+                    html += `<div class="flex gap-1 mt-1 flex-wrap">`;
+                    dayEvents.forEach(event => {
+                        const color = getCategoryColor(event.category);
+                        html += `<div class="w-2 h-2 rounded-full ${color}"></div>`;
+                    });
+                    html += `</div>`;
                 }
 
-                list.innerHTML = monthEvents.map(event => `
+                div.innerHTML = html;
+                div.onclick = () => showDateEvents(dateStr);
+                grid.appendChild(div);
+            }
+        }
+
+        function getCategoryColor(category) {
+            const colors = {
+                service: 'bg-primary',
+                fellowship: 'bg-green-500',
+                outreach: 'bg-orange-500',
+                prayer: 'bg-purple-500',
+                special: 'bg-secondary'
+            };
+            return colors[category] || 'bg-gray-500';
+        }
+
+        function renderEventsList() {
+            const month = currentDate.getMonth();
+            const year = currentDate.getFullYear();
+            const monthEvents = events.filter(e => {
+                const d = new Date(e.date);
+                return d.getMonth() === month && d.getFullYear() === year;
+            }).sort((a, b) => new Date(a.date) - new Date(b.date));
+
+            const list = document.getElementById('eventsList');
+
+            if (monthEvents.length === 0) {
+                list.innerHTML = '<p class="text-gray-500 text-center py-4">No events this month</p>';
+                return;
+            }
+
+            list.innerHTML = monthEvents.map(event => `
                 <div class="event-card p-3 border border-gray-200 rounded-lg hover:shadow-md transition bg-white">
                     <div class="flex items-start justify-between">
                         <div>
@@ -372,24 +424,24 @@
                 </div>
             `).join('');
 
-                lucide.createIcons();
+            lucide.createIcons();
+        }
+
+        function showDateEvents(dateStr) {
+            const dateEvents = events.filter(e => e.date === dateStr);
+            const section = document.getElementById('selectedDateSection');
+            const container = document.getElementById('selectedDateEvents');
+            const title = document.getElementById('selectedDateTitle');
+
+            if (dateEvents.length === 0) {
+                section.classList.add('hidden');
+                return;
             }
 
-            function showDateEvents(dateStr) {
-                const dateEvents = events.filter(e => e.date === dateStr);
-                const section = document.getElementById('selectedDateSection');
-                const container = document.getElementById('selectedDateEvents');
-                const title = document.getElementById('selectedDateTitle');
+            title.textContent = `Events on ${formatDate(dateStr)}`;
+            section.classList.remove('hidden');
 
-                if (dateEvents.length === 0) {
-                    section.classList.add('hidden');
-                    return;
-                }
-
-                title.textContent = `Events on ${formatDate(dateStr)}`;
-                section.classList.remove('hidden');
-
-                container.innerHTML = dateEvents.map(event => `
+            container.innerHTML = dateEvents.map(event => `
                 <div class="bg-blue-50 p-4 rounded-lg border border-blue-200">
                     <h4 class="font-semibold text-primary">${event.title}</h4>
                     <p class="text-sm text-gray-600 mt-1">${event.time || 'All Day'}</p>
@@ -397,73 +449,73 @@
                     <span class="inline-block mt-3 text-xs px-2 py-1 rounded-full bg-white text-gray-600 capitalize">${event.category}</span>
                 </div>
             `).join('');
+        }
+
+        function formatDate(dateStr) {
+            const d = new Date(dateStr);
+            return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+        }
+
+        function openLoginModal() {
+            document.getElementById('loginModal').classList.remove('hidden');
+        }
+
+        function closeLoginModal() {
+            document.getElementById('loginModal').classList.add('hidden');
+            document.getElementById('loginForm').reset();
+        }
+
+        document.getElementById('loginForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const username = document.getElementById('adminUsername').value;
+            const password = document.getElementById('adminPassword').value;
+            if (username === 'pastorron' && password === 'godisgood') {
+                localStorage.setItem('adminLoggedIn', 'true');
+                closeLoginModal();
+                openEventModal();
+            } else {
+                alert('Invalid credentials');
             }
+        });
 
-            function formatDate(dateStr) {
-                const d = new Date(dateStr);
-                return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+        // Check if logged in on load
+        if (localStorage.getItem('adminLoggedIn') === 'true') {
+            // Optionally show logout button or indicator
+        }
+
+        function openEventModal() {
+            if (localStorage.getItem('adminLoggedIn') !== 'true') {
+                openLoginModal();
+                return;
             }
+            document.getElementById('eventModal').classList.remove('hidden');
+            document.getElementById('eventDate').valueAsDate = new Date();
+        }
 
-            function openLoginModal() {
-                document.getElementById('loginModal').classList.remove('hidden');
-            }
+        function closeEventModal() {
+            document.getElementById('eventModal').classList.add('hidden');
+            document.getElementById('eventForm').reset();
+        }
 
-            function closeLoginModal() {
-                document.getElementById('loginModal').classList.add('hidden');
-                document.getElementById('loginForm').reset();
-            }
-
-            document.getElementById('loginForm').addEventListener('submit', function (e) {
-                e.preventDefault();
-                const username = document.getElementById('adminUsername').value;
-                const password = document.getElementById('adminPassword').value;
-                if (username === 'pastorron' && password === 'godisgood') {
-                    localStorage.setItem('adminLoggedIn', 'true');
-                    closeLoginModal();
-                    openEventModal();
-                } else {
-                    alert('Invalid credentials');
-                }
-            });
-
-            // Check if logged in on load
-            if (localStorage.getItem('adminLoggedIn') === 'true') {
-                // Optionally show logout button or indicator
-            }
-
-            function openEventModal() {
-                if (localStorage.getItem('adminLoggedIn') !== 'true') {
-                    openLoginModal();
-                    return;
-                }
-                document.getElementById('eventModal').classList.remove('hidden');
-                document.getElementById('eventDate').valueAsDate = new Date();
-            }
-
-            function closeEventModal() {
-                document.getElementById('eventModal').classList.add('hidden');
-                document.getElementById('eventForm').reset();
-            }
-
-            function deleteEvent(id) {
-                if (confirm('Are you sure you want to delete this event?')) {
-                    events = events.filter(e => e.id !== id);
-                    localStorage.setItem('churchEvents', JSON.stringify(events));
-                    renderCalendar();
-                    renderEventsList();
-                    document.getElementById('selectedDateSection').classList.add('hidden');
-                }
-            }
-
-            // Event Listeners
-            document.getElementById('prevMonth').addEventListener('click', () => {
-                currentDate.setMonth(currentDate.getMonth() - 1);
+        function deleteEvent(id) {
+            if (confirm('Are you sure you want to delete this event?')) {
+                events = events.filter(e => e.id !== id);
+                localStorage.setItem('churchEvents', JSON.stringify(events));
                 renderCalendar();
                 renderEventsList();
-            });
+                document.getElementById('selectedDateSection').classList.add('hidden');
+            }
+        }
 
-            document.getElementById('nextMonth').addEventListener('click', () => {
-                currentDate.setMonth(currentDate.getMonth() + 1);
-                renderCalendar();
-                renderEventsList();
-            });
+        // Event Listeners
+        document.getElementById('prevMonth').addEventListener('click', () => {
+            currentDate.setMonth(currentDate.getMonth() - 1);
+            renderCalendar();
+            renderEventsList();
+        });
+
+        document.getElementById('nextMonth').addEventListener('click', () => {
+            currentDate.setMonth(currentDate.getMonth() + 1);
+            renderCalendar();
+            renderEventsList();
+        });
