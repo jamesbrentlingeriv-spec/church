@@ -133,7 +133,7 @@
             <div class="bg-gray-900 rounded-2xl overflow-hidden shadow-2xl mb-8">
                 <div class="video-container rounded-2xl">
                     <iframe id="liveVideoPlayer" class="w-full h-full"
-                        src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2F100080434132014%2Fvideos%2F1664073915037024&show_text=false"
+                        src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2F100080434132014%2Fvideos%2F1465277841719340&show_text=false"
                         title="Live Stream" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen>
@@ -174,9 +174,9 @@
                             <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
                                 <i data-lucide="sun" class="h-6 w-6 text-white"></i>
                             </div>
-                            <div>
+                            <div>s
                                 <h4 class="font-semibold text-gray-900">Sunday Service</h4>
-                                <p class="text-gray-600">10:30 AM EST</p>
+                                <p class="text-gray-600">11:00 AM EST</p>
                                 <p class="text-sm text-primary mt-1">Live Stream Available</p>
                             </div>
                         </div>
@@ -201,42 +201,18 @@
                         Recent Sermons
                     </h3>
                     <div class="space-y-3">
-                        <button onclick="loadSermon('https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2F100080434132014%2Fvideos%2F1664073915037024&show_text=false&autoplay=true')"
-                            class="w-full text-left p-4 border border-gray-200 rounded-lg hover:border-primary hover:shadow-md transition group">
+                        <div class="p-4 border border-primary rounded-lg bg-blue-50">
                             <div class="flex items-center gap-3">
-                                <div class="w-16 h-12 bg-gradient-to-br from-blue-600 to-blue-700 rounded-lg flex items-center justify-center group-hover:scale-105 transition">
+                                <div
+                                    class="w-16 h-12 bg-gradient-to-br from-blue-600 to-blue-700 rounded-lg flex items-center justify-center">
                                     <i data-lucide="play" class="h-6 w-6 text-white"></i>
                                 </div>
                                 <div class="flex-1">
-                                    <h4 class="font-medium text-gray-900 group-hover:text-primary transition">Walking By Faith, Not by Sight</h4>
-                                    <p class="text-sm text-gray-500">Pastor Ron • 03/08/2026</p>
-                                </div>
-                            </div>
-                        </button>
-                        <button onclick="loadSermon('https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2F100080434132014%2Fvideos%2F1612568973098017&show_text=false&autoplay=true')"
-                            class="w-full text-left p-4 border border-gray-200 rounded-lg hover:border-primary hover:shadow-md transition group">
-                            <div class="flex items-center gap-3">
-                                <div class="w-16 h-12 bg-gradient-to-br from-blue-600 to-blue-700 rounded-lg flex items-center justify-center group-hover:scale-105 transition">
-                                    <i data-lucide="play" class="h-6 w-6 text-white"></i>
-                                </div>
-                                <div class="flex-1">
-                                    <h4 class="font-medium text-gray-900 group-hover:text-primary transition">The Dimension of Expectation</h4>
-                                    <p class="text-sm text-gray-500">Pastor Ron • 02/15/26</p>
-                                </div>
-                            </div>
-                        </button>
-                        <button onclick="loadSermon('https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2F100080434132014%2Fvideos%2F1465277841719340&show_text=false&autoplay=true')"
-                            class="w-full text-left p-4 border border-gray-200 rounded-lg hover:border-primary hover:shadow-md transition group">
-                            <div class="flex items-center gap-3">
-                                <div class="w-16 h-12 bg-gradient-to-br from-blue-600 to-blue-700 rounded-lg flex items-center justify-center group-hover:scale-105 transition">
-                                    <i data-lucide="play" class="h-6 w-6 text-white"></i>
-                                </div>
-                                <div class="flex-1">
-                                    <h4 class="font-medium text-gray-900 group-hover:text-primary transition">Spiritual Deception Vs Divine Promise</h4>
+                                    <h4 class="font-medium text-gray-900">Spiritual Deception Vs Divine Promise</h4>
                                     <p class="text-sm text-gray-500">Pastor Ron • 02/22/26</p>
                                 </div>
                             </div>
-                        </button>
+                        </div>
                     </div>
                     <a href="https://www.facebook.com/KingdomJourneyMinistries/live_videos" target="_blank"
                         class="text-primary hover:text-secondary font-medium text-sm mt-4 inline-flex items-center gap-1 block pt-4 border-t border-gray-200">
@@ -299,15 +275,6 @@
     <script src="script.js"></script>
     <script>
         lucide.createIcons();
-
-        function loadSermon(embedUrl) {
-            const player = document.getElementById('liveVideoPlayer');
-            player.src = '';
-            setTimeout(() => {
-                player.src = embedUrl;
-                player.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            }, 50);
-        }
     </script>
 </body>
 
