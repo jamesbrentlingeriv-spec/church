@@ -39,12 +39,11 @@
     <!-- Navigation (Same as index) -->
     <nav class="bg-white shadow-md sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-20">
-                <div class="flex items-center">
+            <div class="flex justify-between h-20 min-w-0">
+                <div class="flex items-center flex-shrink-0 mr-4">
                     <a href="index.html" class="flex-shrink-0 flex items-center gap-3">
                         <div
                             class="logo-container h-10 w-10 flex items-center justify-center overflow-hidden rounded-lg bg-white border-2 border-primary">
-                            <i data-lucide="church" class="h-6 w-6 text-primary logo-fallback hidden"></i>
                             <img class="site-logo h-full w-full object-cover" src="output_ocyovl.png"
                                 alt="Kingdom's Journey Logo">
                         </div>
@@ -242,6 +241,15 @@
         </div>
     </section>
 
+    <!-- Slideshow -->
+    <section class="py-12 bg-white">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="relative overflow-hidden rounded-2xl shadow-xl">
+                <img id="aboutSlide" src="kjm1.png" class="w-full max-h-[500px] object-contain bg-gray-900 transition-opacity duration-700">
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="bg-gray-950 text-gray-300 py-12">
         <div class="max-w-7xl mx-auto px-4 text-center">
@@ -250,7 +258,16 @@
     </footer>
 
     <script src="script.js"></script>
-    <script>lucide.createIcons();</script>
+    <script>
+        lucide.createIcons();
+        const slides = ['kjm1.png','kjm2.png','kjm3.png'];
+        let i = 0;
+        const el = document.getElementById('aboutSlide');
+        setInterval(() => {
+            el.style.opacity = 0;
+            setTimeout(() => { i = (i+1) % slides.length; el.src = slides[i]; el.style.opacity = 1; }, 700);
+        }, 3500);
+    </script>
 </body>
 
 </html>

@@ -76,19 +76,18 @@
     <!-- Navigation -->
     <nav class="bg-white shadow-md sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-20">
-                <div class="flex items-center">
+            <div class="flex justify-between h-20 min-w-0">
+                <div class="flex items-center flex-shrink-0 mr-4">
                     <a href="index.html" class="flex-shrink-0 flex items-center gap-3">
                         <div id="logoContainer"
                             class="h-10 w-10 flex items-center justify-center overflow-hidden rounded-lg bg-white border-2 border-primary">
-                            <i data-lucide="church" class="h-6 w-6 text-primary logo-fallback hidden"></i>
                             <img id="siteLogo" class="h-full w-full object-cover" src="output_ocyovl.png"
                                 alt="Kingdom's Journey Logo">
                         </div>
                         <div>
                             <span class="font-serif text-2xl font-bold text-primary block leading-tight">Kingdom
                                 Journey</span>
-                            <span class="text-xs text-secondary font-semibold italic tracking-wider">Real Church for
+                            <span class="text-xs text-blue-500 font-semibold italic tracking-wider">Real Church for
                                 Real People</span>
                         </div>
                     </a>
@@ -112,7 +111,7 @@
                         <i data-lucide="video" class="h-4 w-4"></i> Live
                     </a>
                     <a href="giving.html"
-                        class="bg-secondary text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-amber-600 transition shadow-md ml-2">Give
+                        class="bg-primary text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-900 transition shadow-md ml-2 border border-blue-400">Give
                         Online</a>
                     <a href="contact.html"
                         class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition hover:bg-blue-50">Contact</a>
@@ -143,7 +142,7 @@
                     class="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base flex items-center gap-2">
                     <i data-lucide="video" class="h-4 w-4"></i> Watch Live
                 </a>
-                <a href="giving.html" class="text-secondary font-semibold block px-3 py-2 rounded-md text-base">Give
+                <a href="giving.html" class="text-primary font-semibold block px-3 py-2 rounded-md text-base">Give
                     Online</a>
                 <a href="contact.html"
                     class="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base">Contact</a>
@@ -154,21 +153,21 @@
     <!-- Hero Section -->
     <div class="relative overflow-hidden hero-pattern" style="background-color: #1e3a8a;">
         <!-- Static flat logo foreground -->
-        <div class="absolute inset-0 flex items-center justify-end p-12 lg:p-24 pointer-events-none">
-            <div class="relative w-80 h-80 lg:w-120 lg:h-120">
+        <div class="absolute top-4 right-4 md:inset-0 md:flex md:items-center md:justify-end md:p-12 lg:p-24 pointer-events-none">
+            <div class="relative w-24 h-24 md:w-80 md:h-80 lg:w-120 lg:h-120">
                 <img src="output_ocyovl.png" alt="Kingdom's Journey Logo"
                     class="w-full h-full object-contain drop-shadow-[0_0_30px_rgba(255,255,255,0.9)] brightness-110">
             </div>
         </div>
-        <div class="absolute inset-0 flex items-center justify-end p-12 lg:p-24">
-            <div class="relative w-64 h-64 lg:w-96 lg:h-96 animate-spin-slow">
+        <div class="absolute top-4 right-4 md:inset-0 md:flex md:items-center md:justify-end md:p-12 lg:p-24">
+            <div class="relative w-20 h-20 md:w-64 md:h-64 lg:w-96 lg:h-96 animate-spin-slow">
                 <img src="logogif.gif" alt="Kingdom's Journey Logo"
                     class="w-full h-full object-contain drop-shadow-[0_0_20px_rgba(255,255,255,0.8)] mix-blend-screen">
             </div>
         </div>
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
             <div class="lg:w-2/3 fade-in">
-                <p class="text-accent font-semibold text-lg mb-4 italic tracking-wide drop-shadow-lg">Real Church for
+                <p class="text-blue-200 font-semibold text-lg mb-4 italic tracking-wide drop-shadow-lg">Real Church for
                     Real People</p>
                 <h1
                     class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-6 leading-tight drop-shadow-2xl">
@@ -181,7 +180,7 @@
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4">
                     <a href="watch.html"
-                        class="inline-flex items-center justify-center bg-secondary hover:bg-amber-600 text-white font-semibold py-3 px-8 rounded-lg transition shadow-xl text-lg drop-shadow-lg">
+                        class="inline-flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition shadow-xl text-lg drop-shadow-lg">
                         <i data-lucide="play-circle" class="mr-2 h-5 w-5"></i>
                         Watch Live
                     </a>
@@ -195,12 +194,34 @@
         </div>
     </div>
 
+    <!-- Meet Our Pastors -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-4">Meet Our Pastors</h2>
+                <div class="w-24 h-1 bg-secondary mx-auto rounded-full"></div>
+            </div>
+            <div class="flex flex-col md:flex-row items-center gap-10">
+                <div class="flex-shrink-0">
+                    <img src="pr.jpg" alt="Pastor Ron and Teresa Pietosi" class="w-64 h-64 object-cover rounded-2xl shadow-xl">
+                </div>
+                <div>
+                    <h3 class="text-2xl font-serif font-bold text-primary mb-1">Pastor Ron and Teresa Pietosi</h3>
+                    <p class="text-secondary font-semibold mb-4">Lead Pastors</p>
+                    <p class="text-gray-600 mb-3">Meet lead Pastors Ron and Teresa. Ron and Teresa have been married for 27 years, have 3 children and their spouses and 7 energetic grandchildren.</p>
+                    <p class="text-gray-600 mb-3">It is Pastor Ron and Teresa's desire to see everyone in our community know Jesus more, to love Him and love one another.</p>
+                    <p class="text-gray-600">Understand that you are not alone and we can take this journey together.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Welcome Section -->
     <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
                 <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-4">Welcome Home</h2>
-                <div class="w-24 h-1 bg-secondary mx-auto rounded-full"></div>
+                <div class="w-24 h-1 bg-primary mx-auto rounded-full"></div>
                 <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
                     Whether you're new to faith or have been walking with God for years,
                     there's a place for you here at Kingdom's Journey.
@@ -216,8 +237,8 @@
                     <p class="text-gray-600">Experience genuine fellowship and build lasting relationships with people
                         who care.</p>
                 </div>
-                <div class="text-center p-6 rounded-xl bg-amber-50 hover:bg-amber-100 transition duration-300">
-                    <div class="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mx-auto mb-4">
+                <div class="text-center p-6 rounded-xl bg-blue-50 hover:bg-blue-100 transition duration-300">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
                         <i data-lucide="book-open" class="h-8 w-8 text-white"></i>
                     </div>
                     <h3 class="text-xl font-semibold text-gray-900 mb-2">Biblical Teaching</h3>
@@ -236,27 +257,36 @@
         </div>
     </section>
 
+    <!-- Slideshow -->
+    <section class="py-12 bg-white">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="relative overflow-hidden rounded-2xl shadow-xl">
+                <img id="indexSlide" src="kjm1.png" class="w-full max-h-[500px] object-contain bg-gray-900 transition-opacity duration-700">
+            </div>
+        </div>
+    </section>
+
     <!-- Quick Info Section -->
     <section class="py-16 bg-gray-900 text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
                 <div class="p-4">
-                    <i data-lucide="map-pin" class="h-8 w-8 text-secondary mx-auto mb-3"></i>
+                    <i data-lucide="map-pin" class="h-8 w-8 text-blue-400 mx-auto mb-3"></i>
                     <h4 class="font-semibold text-lg">Location</h4>
                     <p class="text-gray-400 mt-1">101 Edgewood Plaza<br>Nicholasville, KY 40356</p>
                 </div>
                 <div class="p-4">
-                    <i data-lucide="clock" class="h-8 w-8 text-secondary mx-auto mb-3"></i>
+                    <i data-lucide="clock" class="h-8 w-8 text-blue-400 mx-auto mb-3"></i>
                     <h4 class="font-semibold text-lg">Service Times</h4>
                     <p class="text-gray-400 mt-1">Sunday: 10:30 AM<br>Wednesday: 7:00 PM</p>
                 </div>
                 <div class="p-4">
-                    <i data-lucide="mail" class="h-8 w-8 text-secondary mx-auto mb-3"></i>
+                    <i data-lucide="mail" class="h-8 w-8 text-blue-400 mx-auto mb-3"></i>
                     <h4 class="font-semibold text-lg">Email</h4>
                     <p class="text-gray-400 mt-1">Ron@KingdomJourneyKY.com</p>
                 </div>
                 <div class="p-4">
-                    <i data-lucide="video" class="h-8 w-8 text-secondary mx-auto mb-3"></i>
+                    <i data-lucide="video" class="h-8 w-8 text-blue-400 mx-auto mb-3"></i>
                     <h4 class="font-semibold text-lg">Live Stream</h4>
                     <p class="text-gray-400 mt-1">Every Sunday at 10:30 AM</p>
                 </div>
@@ -291,7 +321,7 @@
                         </div>
                         <div>
                             <span class="font-serif text-xl font-bold text-white block">Kingdom Journey</span>
-                            <span class="text-xs text-secondary italic">Real Church for Real People</span>
+                            <span class="text-xs text-blue-400 italic">Real Church for Real People</span>
                         </div>
                     </div>
                     <p class="text-gray-400 mb-4 max-w-sm">
@@ -299,13 +329,13 @@
                         community of faith, hope, and love in Nicholasville, Kentucky.
                     </p>
                     <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-secondary transition">
+                        <a href="#" class="text-gray-400 hover:text-white transition">
                             <i data-lucide="facebook" class="h-5 w-5"></i>
                         </a>
-                        <a href="#" class="text-gray-400 hover:text-secondary transition">
+                        <a href="#" class="text-gray-400 hover:text-white transition">
                             <i data-lucide="youtube" class="h-5 w-5"></i>
                         </a>
-                        <a href="#" class="text-gray-400 hover:text-secondary transition">
+                        <a href="#" class="text-gray-400 hover:text-white transition">
                             <i data-lucide="instagram" class="h-5 w-5"></i>
                         </a>
                     </div>
@@ -313,11 +343,11 @@
                 <div>
                     <h5 class="text-white font-semibold mb-4">Quick Links</h5>
                     <ul class="space-y-2">
-                        <li><a href="about.html" class="hover:text-secondary transition">About Us</a></li>
-                        <li><a href="services.html" class="hover:text-secondary transition">Services</a></li>
-                        <li><a href="calendar.html" class="hover:text-secondary transition">Events</a></li>
-                        <li><a href="giving.html" class="hover:text-secondary transition">Giving</a></li>
-                        <li><a href="admin.html" class="hover:text-secondary transition text-gray-500 text-sm">Admin</a>
+                        <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="services.html" class="hover:text-white transition">Services</a></li>
+                        <li><a href="calendar.html" class="hover:text-white transition">Events</a></li>
+                        <li><a href="giving.html" class="hover:text-white transition">Giving</a></li>
+                        <li><a href="admin.html" class="hover:text-white transition text-gray-500 text-sm">Admin</a>
                         </li>
                     </ul>
                 </div>
@@ -344,6 +374,13 @@
     <script src="script.js"></script>
     <script>
         lucide.createIcons();
+        const slides = ['kjm1.png','kjm2.png','kjm3.png'];
+        let i = 0;
+        const el = document.getElementById('indexSlide');
+        setInterval(() => {
+            el.style.opacity = 0;
+            setTimeout(() => { i = (i+1) % slides.length; el.src = slides[i]; el.style.opacity = 1; }, 700);
+        }, 3500);
     </script>
 </body>
 
