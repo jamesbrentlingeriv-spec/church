@@ -302,8 +302,11 @@
 
         function loadSermon(embedUrl) {
             const player = document.getElementById('liveVideoPlayer');
-            player.src = embedUrl;
-            player.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            player.src = '';
+            setTimeout(() => {
+                player.src = embedUrl;
+                player.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 50);
         }
     </script>
 </body>
